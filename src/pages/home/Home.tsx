@@ -1,4 +1,3 @@
-import React from "react";
 import landing1 from "@/pictures/home/landing.webp";
 import placeholder from "@/pictures/home/placeholder.webp";
 import { Arrow } from "@/resources/Arrow";
