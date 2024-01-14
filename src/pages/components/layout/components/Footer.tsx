@@ -1,4 +1,5 @@
 import { Arrow } from "@/resources/Arrow";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
