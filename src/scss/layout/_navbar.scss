@@ -1,0 +1,29 @@
+@use "../utils/mixins";
+@import "../utils/variables";
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  padding: 4vh 5vw;
+  top: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  ul {
+    display: grid;
+    grid-template-columns: 10fr repeat(3, 5fr);
+    font-size: $navbar-letters;
+
+    @include mixins.respond(phone) {
+    }
+  }
+
+  li {
+    align-self: center;
+
+    @include mixins.respond(phone) {
+      align-self: flex-start;
+    }
+  }
+}

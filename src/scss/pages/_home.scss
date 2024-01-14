@@ -1,0 +1,66 @@
+@use "../utils/mixins";
+@import "../utils/variables";
+
+.home-header {
+  position: fixed;
+  z-index: -1;
+  font-size: $header-letters;
+  line-height: $header-line-height;
+  top: 20vh;
+  left: 5vw;
+
+  a svg {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: text-bottom;
+  }
+
+  @include mixins.respond(phone) {
+    display: none;
+  }
+}
+
+.home-header-mobile {
+  display: none;
+
+  @include mixins.respond(phone) {
+    display: inline-block;
+    position: fixed;
+    z-index: -1;
+    left: 5vw;
+    top: 15vh;
+    font-size: $header-letters-mobile;
+    line-height: $header-line-height-mobile;
+  }
+
+  a svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: text-bottom;
+  }
+
+  a {
+    @include mixins.respond(phone) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.home-pictures {
+  z-index: 10;
+  padding: 0vh 5vw;
+  margin-top: 50vh;
+
+  @include mixins.respond(phone) {
+    margin-top: 55vh;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 10vh;
+
+    @include mixins.respond(phone) {
+      margin-bottom: 3vh;
+    }
+  }
+}

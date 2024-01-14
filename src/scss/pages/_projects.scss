@@ -1,0 +1,127 @@
+@use "../utils/mixins";
+@import "../utils/variables";
+
+.projects-header {
+  margin-top: 16vh;
+  display: flex;
+  padding: 0 7vw;
+  h1 {
+    font-size: $header-letters-mobile;
+    line-height: $header-line-height-mobile;
+  }
+}
+
+.projects-main {
+  padding: 7vw;
+  font-size: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(53, 10vh);
+
+  @include mixins.respond(phone) {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Texts
+
+.text1,
+.text2,
+.text3,
+.text4,
+.credits {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+
+.credits {
+  @include mixins.respond(phone) {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+
+.text1 {
+  grid-column-start: 6;
+  grid-column-end: 10;
+  grid-row-start: 9;
+  grid-row-end: 14;
+}
+.text2 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 14;
+  grid-row-end: 21;
+}
+
+.credits {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 51;
+  grid-row-end: 54;
+}
+
+// Landscape
+
+.land1 {
+  grid-column-start: 3;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 8;
+}
+
+.land2 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 26;
+  grid-row-end: 30;
+}
+
+.land3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 26;
+  grid-row-end: 30;
+}
+
+.land4 {
+  grid-column-start: 1;
+  grid-column-end: 11;
+  grid-row-start: 41;
+  grid-row-end: 49;
+}
+
+// Portrait
+
+.port1 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 13;
+  z-index: 1;
+  @include mixins.respond(phone) {
+    z-index: -1;
+  }
+}
+
+.port2 {
+  grid-column-start: 5;
+  grid-column-end: 10;
+  grid-row-start: 16;
+  grid-row-end: 24;
+}
+
+.port3 {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  grid-row-start: 31;
+  grid-row-end: 39;
+}

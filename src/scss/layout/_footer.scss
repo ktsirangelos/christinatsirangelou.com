@@ -1,0 +1,64 @@
+@use "../utils/mixins";
+@import "../utils/variables";
+
+footer {
+  font-size: $footer-letters;
+  padding: 3rem 5vw;
+  margin-top: 30vh;
+
+  @include mixins.respond(phone) {
+    font-size: $footer-letters-mobile;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 10fr repeat(3, 5fr);
+  }
+
+  li {
+    align-self: center;
+
+    @include mixins.respond(phone) {
+      align-self: flex-start;
+    }
+  }
+
+  .copyright {
+    @include mixins.respond(phone) {
+      display: none;
+    }
+  }
+
+  .copyright-mobile {
+    display: none;
+    @include mixins.respond(phone) {
+      display: inline-block;
+    }
+  }
+
+  .insta {
+    grid-column-start: 3;
+    @include mixins.respond(phone) {
+      display: none;
+    }
+  }
+
+  .insta-mobile {
+    display: none;
+    @include mixins.respond(phone) {
+      display: inline-block;
+      grid-column-start: 3;
+    }
+  }
+
+  .top {
+    grid-column-start: 4;
+  }
+}
+
+.insta a svg,
+.insta-mobile a svg {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: text-bottom;
+}

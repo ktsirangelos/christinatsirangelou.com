@@ -1,0 +1,32 @@
+@use "../utils/mixins";
+@import "../utils/variables";
+
+.public-main {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 16vh;
+
+  @include mixins.respond(phone) {
+    margin-top: 15vh;
+  }
+}
+
+.public-template {
+  display: grid;
+  grid-template-columns: repeat(5, 5fr);
+  padding: 1.5lvh 5vw;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: 1.8rem;
+}
+
+.publication {
+  display: grid;
+  grid-template-columns: 10fr 10fr 5fr;
+  padding: 1.5lvh 5vw;
+  border-bottom: 1px solid black;
+  p {
+    font-size: 1.8rem;
+  }
+}
