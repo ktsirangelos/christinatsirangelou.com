@@ -2,6 +2,17 @@ import { useEffect, useState } from "react";
 import landing from "@/pictures/home/landing.webp";
 import placeholder from "@/pictures/home/placeholder.webp";
 import { Arrow } from "@/resources/Arrow";
+import "./Home.scss";
+
+type ContactDetailProps = {
+  label: string;
+  link: string;
+};
+
+type ImageComponentProps = {
+  src: string;
+  alt: string;
+};
 
 const imageData = [
   { src: landing, alt: "Landing Image" },
@@ -14,16 +25,38 @@ const imageData = [
 
 const desktopData = {
   title: "Christina Tsirangelou αrchitects",
-  address: "Dionysiou Areopagitou 37, Athens",
-  email: "info@christinatsirangelou.com",
-  phone: "+30 6 974 110 689",
+  contactDetails: [
+    {
+      label: "Dionysiou Areopagitou 37, Athens",
+      link: "https://goo.gl/maps/yRpUKarCFu8uGnvj6",
+    },
+    {
+      label: "info@christinatsirangelou.com",
+      link: "mailto:info@christinatsirangelou.com",
+    },
+    {
+      label: "+30 6 974 110 689",
+      link: "tel:+306974110689",
+    },
+  ],
 };
 
 const mobileData = {
   title: "Christina\nTsirangelou\nαrchitects",
-  address: "Address",
-  email: "Email",
-  phone: "Phone",
+  contactDetails: [
+    {
+      label: "Address",
+      link: "https://goo.gl/maps/yRpUKarCFu8uGnvj6",
+    },
+    {
+      label: "Email",
+      link: "mailto:info@christinatsirangelou.com",
+    },
+    {
+      label: "Phone",
+      link: "tel:+306974110689",
+    },
+  ],
 };
 
 const useResponsiveData = () => {
@@ -51,39 +84,39 @@ const useResponsiveData = () => {
   return { ...data, formattedTitle };
 };
 
+const ContactDetail = ({ label, link }: ContactDetailProps) => {
+  return (
+    <p>
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        {label}
+        <Arrow />
+      </a>
+    </p>
+  );
+};
+
 const HomeHeader = () => {
-  const { formattedTitle, address, email, phone } = useResponsiveData();
+  const { formattedTitle, contactDetails } = useResponsiveData();
 
   return (
     <header className="business-card">
       <p>{formattedTitle}</p>
-      <p>
-        <a href="https://goo.gl/maps/yRpUKarCFu8uGnvj6" target="_blank">
-          {address}
-          <Arrow />
-        </a>
-      </p>
-      <p>
-        <a href="mailto:info@christinatsirangelou.com">
-          {email}
-          <Arrow />
-        </a>
-      </p>
-      <p>
-        <a href="tel:+306974110689">
-          {phone}
-          <Arrow />
-        </a>
-      </p>
+      {contactDetails.map((detail, index) => (
+        <ContactDetail key={index} {...detail} />
+      ))}
     </header>
   );
+};
+
+const ImageComponent = ({ src, alt }: ImageComponentProps) => {
+  return <img src={src} alt={alt} />;
 };
 
 const HomeMain = () => {
   return (
     <main className="home-pictures">
       {imageData.map((image, index) => (
-        <img key={index} src={image.src} alt={image.alt} />
+        <ImageComponent key={index} {...image} />
       ))}
     </main>
   );
