@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <nav>
       <ul>
-        <li className="logo">
+        <li> 
           <NavLink to="/">CTα</NavLink>
         </li>
         <li>
