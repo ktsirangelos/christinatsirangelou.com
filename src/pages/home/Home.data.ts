@@ -4,7 +4,7 @@ import placeholder from "@/pictures/home/placeholder.webp";
 const DESKTOP_BREAKPOINT = 600;
 
 const imageData = [
-  { src: landing, alt: "Landing Image" },
+  { src: landing, alt: "Pefka-7, Retziki" },
   { src: placeholder, alt: "Placeholder Image 1" },
   { src: placeholder, alt: "Placeholder Image 2" },
   { src: placeholder, alt: "Placeholder Image 3" },
