@@ -1,4 +1,3 @@
-import { Arrow } from "@/resources/Arrow";
 import "./Footer.scss";
 
 const Footer = () => {
@@ -14,13 +13,13 @@ const Footer = () => {
         <li className="insta">
           <a href="https://www.instagram.com/cta.athens/" target="_blank">
             Instagram
-            <Arrow />
+            <span className="material-symbols-outlined">arrow_outward</span>
           </a>
         </li>
         <li className="insta-mobile">
           <a href="https://www.instagram.com/cta.athens/" target="_blank">
             Insta
-            <Arrow />
+            <span className="material-symbols-outlined">arrow_outward</span>
           </a>
         </li>
         <li className="top">

@@ -3,7 +3,7 @@ import placeholder from "@/pictures/home/placeholder.webp";
 
 const DESKTOP_BREAKPOINT = 600;
 
-const imageData = [
+const landingPictures = [
   { src: landing, alt: "Pefka-7, Retziki" },
   { src: placeholder, alt: "Placeholder Image 1" },
   { src: placeholder, alt: "Placeholder Image 2" },
@@ -12,7 +12,7 @@ const imageData = [
   { src: placeholder, alt: "Placeholder Image 5" },
 ];
 
-const desktopData = {
+const contactDetailsDesktop = {
   title: "Christina Tsirangelou αrchitects",
   contactDetails: [
     {
@@ -30,7 +30,7 @@ const desktopData = {
   ],
 };
 
-const mobileData = {
+const contactDetailsMobile = {
   title: "Christina\nTsirangelou\nαrchitects",
   contactDetails: [
     {
@@ -48,4 +48,9 @@ const mobileData = {
   ],
 };
 
-export { DESKTOP_BREAKPOINT, desktopData, mobileData, imageData };
+export {
+  DESKTOP_BREAKPOINT,
+  landingPictures,
+  contactDetailsDesktop,
+  contactDetailsMobile,
+};

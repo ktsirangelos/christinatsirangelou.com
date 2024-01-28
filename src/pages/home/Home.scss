@@ -1,7 +1,7 @@
 @use "../../scss/utils/mixins";
 @import "../../scss/utils/variables";
 
-.business-card {
+.home-header {
   position: fixed;
   z-index: -1;
   font-size: $header-letters;
@@ -9,10 +9,9 @@
   top: 20vh;
   left: 5vw;
 
-  a svg {
-    width: 1.1em;
-    height: 1.1em;
-    vertical-align: text-bottom;
+  .material-symbols-outlined {
+    font-size: 4rem;
+    vertical-align: text-top;
   }
 
   @include mixins.respond(phone) {
@@ -26,7 +25,7 @@
   }
 }
 
-.home-pictures {
+.home-main {
   z-index: 10;
   padding: 0vh 5vw;
   margin-top: 50vh;

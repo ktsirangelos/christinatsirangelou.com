@@ -41,6 +41,9 @@ footer {
     @include mixins.respond(phone) {
       display: none;
     }
+    .material-symbols-outlined {
+      font-size: 2rem;
+    }
   }
 
   .insta-mobile {
@@ -54,11 +57,4 @@ footer {
   .top {
     grid-column-start: 4;
   }
-}
-
-.insta a svg,
-.insta-mobile a svg {
-  width: 1.1em;
-  height: 1.1em;
-  vertical-align: text-bottom;
 }

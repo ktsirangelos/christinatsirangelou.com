@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import { Arrow } from "@/resources/Arrow";
 import {
   DESKTOP_BREAKPOINT,
-  desktopData,
-  mobileData,
-  imageData,
+  contactDetailsDesktop,
+  contactDetailsMobile,
+  landingPictures,
 } from "./Home.data";
 import "./Home.scss";
 
@@ -18,29 +17,33 @@ type ImageComponentProps = {
   alt: string;
 };
 
-const useResponsiveData = () => {
-  const [data, setData] = useState(
-    window.innerWidth > DESKTOP_BREAKPOINT ? desktopData : mobileData,
+const useResponsiveDetails = () => {
+  const [contactDetails, setContactDetails] = useState(
+    window.innerWidth > DESKTOP_BREAKPOINT
+      ? contactDetailsDesktop
+      : contactDetailsMobile,
   );
 
   useEffect(() => {
     const handleResize = () => {
       const isDesktop = window.innerWidth > DESKTOP_BREAKPOINT;
-      setData(isDesktop ? desktopData : mobileData);
+      setContactDetails(
+        isDesktop ? contactDetailsDesktop : contactDetailsMobile,
+      );
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const formattedTitle = data.title.split("\n").map((line, index) => (
+  const formattedTitle = contactDetails.title.split("\n").map((line, index) => (
     <span key={index}>
       {line}
       <br />
     </span>
   ));
 
-  return { ...data, formattedTitle };
+  return { ...contactDetails, formattedTitle };
 };
 
 const ContactDetail = ({ label, link }: ContactDetailProps) => {
@@ -48,9 +51,22 @@ const ContactDetail = ({ label, link }: ContactDetailProps) => {
     <p>
       <a href={link} target="_blank" rel="noopener noreferrer">
         {label}
-        <Arrow />
+        <span className="material-symbols-outlined">arrow_outward</span>
       </a>
     </p>
+  );
+};
+
+const HomeHeader = () => {
+  const { formattedTitle, contactDetails } = useResponsiveDetails();
+
+  return (
+    <header className="home-header">
+      <p>{formattedTitle}</p>
+      {contactDetails.map((detail, index) => (
+        <ContactDetail key={index} {...detail} />
+      ))}
+    </header>
   );
 };
 
@@ -58,21 +74,21 @@ const ImageComponent = ({ src, alt }: ImageComponentProps) => {
   return <img src={src} alt={alt} />;
 };
 
+const HomeMain = () => {
+  return (
+    <main className="home-main">
+      {landingPictures.map((image, index) => (
+        <ImageComponent key={index} {...image} />
+      ))}
+    </main>
+  );
+};
+
 const Home = () => {
-  const { formattedTitle, contactDetails } = useResponsiveData();
   return (
     <>
-      <header className="business-card">
-        <p>{formattedTitle}</p>
-        {contactDetails.map((detail, index) => (
-          <ContactDetail key={index} {...detail} />
-        ))}
-      </header>
-      <main className="home-pictures">
-        {imageData.map((image, index) => (
-          <ImageComponent key={index} {...image} />
-        ))}
-      </main>
+      <HomeHeader />
+      <HomeMain />
     </>
   );
 };
