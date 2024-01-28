@@ -54,31 +54,27 @@ const ContactDetail = ({ label, link }: ContactDetailProps) => {
   );
 };
 
-const HomeHeader = () => {
-  const { formattedTitle, contactDetails } = useResponsiveData();
-
-  return (
-    <header className="business-card">
-      <p>{formattedTitle}</p>
-      {contactDetails.map((detail, index) => (
-        <ContactDetail key={index} {...detail} />
-      ))}
-    </header>
-  );
-};
-
 const ImageComponent = ({ src, alt }: ImageComponentProps) => {
   return <img src={src} alt={alt} />;
 };
 
-const HomeMain = () => {
+const Home = () => {
+  const { formattedTitle, contactDetails } = useResponsiveData();
   return (
-    <main className="home-pictures">
-      {imageData.map((image, index) => (
-        <ImageComponent key={index} {...image} />
-      ))}
-    </main>
+    <>
+      <header className="business-card">
+        <p>{formattedTitle}</p>
+        {contactDetails.map((detail, index) => (
+          <ContactDetail key={index} {...detail} />
+        ))}
+      </header>
+      <main className="home-pictures">
+        {imageData.map((image, index) => (
+          <ImageComponent key={index} {...image} />
+        ))}
+      </main>
+    </>
   );
 };
 
-export { HomeHeader, HomeMain };
+export { Home };
