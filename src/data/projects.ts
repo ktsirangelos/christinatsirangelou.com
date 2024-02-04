@@ -1,7 +1,7 @@
 const projects = [
   {
     id: 1,
-    filter: "architecture",
+    category: "architecture",
     title: "Pefka 7",
     type: "New Build",
     year: "2022-",
@@ -9,12 +9,9 @@ const projects = [
     client: "Farlalis Building",
     status: "In Progress",
     size: 520,
-    picUrl1: "pictures/pefka-7/camera_1.0060_small.webp",
-    picUrl2: "pictures/pefka-7/camera_8.0060_small.webp",
-    projectUrl: "projects/pefka-7.html",
   },
   {
-    id: 1,
+    id: 2,
     filter: "architecture",
     title: "Pefka 7",
     type: "New Build",
@@ -23,12 +20,9 @@ const projects = [
     client: "Farlalis Building",
     status: "In Progress",
     size: 520,
-    picUrl1: "pictures/pefka-7/camera_1.0060_small.webp",
-    picUrl2: "pictures/pefka-7/camera_8.0060_small.webp",
-    projectUrl: "projects/pefka-7.html",
   },
   {
-    id: 1,
+    id: 3,
     filter: "architecture",
     title: "Pefka 7",
     type: "New Build",
@@ -37,9 +31,6 @@ const projects = [
     client: "Farlalis Building",
     status: "In Progress",
     size: 520,
-    picUrl1: "pictures/pefka-7/camera_1.0060_small.webp",
-    picUrl2: "pictures/pefka-7/camera_8.0060_small.webp",
-    projectUrl: "projects/pefka-7.html",
   },
 ];
 

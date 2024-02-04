@@ -12,9 +12,9 @@ const WorkHeader = () => {
   );
 };
 
-const Categories = () => {
+const ProjectCategories = () => {
   return (
-    <ul className="categories">
+    <ul className="project-categories">
       <li className="all">
         <button id="all">All</button>
       </li>
@@ -40,13 +40,27 @@ const Categories = () => {
   );
 };
 
-const WorkAccordion = () => {
+const ProjectsAccordion = () => {
   return (
     <Accordion>
       {projects.map(
-        ({ title, type }: { title: string; type: string }, i: number) => (
-          <AccordionItem header={title} key={i}>
-            {type}
+        ({ title, type, year, location, client, status, size }, id) => (
+          <AccordionItem
+            header={
+              <>
+                <div className="title">{title}</div>
+                <div className="type">{type}</div>
+                <div className="year">{year}</div>
+              </>
+            }
+            key={id}
+          >
+            <>
+              <div className="location">{location}</div>
+              <div className="client">{client}</div>
+              <div className="status">{status}</div>
+              <div className="size">{size}sqm</div>
+            </>
           </AccordionItem>
         ),
       )}
@@ -57,11 +71,11 @@ const WorkAccordion = () => {
 const WorkMain = () => {
   return (
     <main className="work-main">
-      <section className="category-filter">
-        <Categories />
+      <section className="categories-filter">
+        <ProjectCategories />
       </section>
-      <section className="accordion">
-        <WorkAccordion />
+      <section className="projects-accordion">
+        <ProjectsAccordion />
       </section>
     </main>
   );
