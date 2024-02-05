@@ -1,5 +1,5 @@
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
-import { projects } from "@/data/projects";
+import { projects } from "./Work.data";
 import "./Work.scss";
 
 const WorkHeader = () => {
