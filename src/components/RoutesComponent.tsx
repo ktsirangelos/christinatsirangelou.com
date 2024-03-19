@@ -7,7 +7,7 @@ import { About } from "@/pages/about/About";
 
 const RoutesComponent = () => (
   <Routes>
-    <Route path="/" element={<Layout />}>
+    <Route path="/christinatsirangelou.com/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="work" element={<Work />} />
       <Route path="public" element={<Public />} />
