@@ -22,6 +22,10 @@ nav {
   li {
     align-self: center;
 
+    a.active {
+      text-decoration: underline;
+    }
+
     @include mixins.respond(phone) {
       align-self: flex-start;
     }
