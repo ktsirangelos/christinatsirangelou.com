@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     id: 1,
     category: "architecture",
@@ -33,5 +33,3 @@ const projects = [
     size: 520,
   },
 ];
-
-export { projects };

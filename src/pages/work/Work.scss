@@ -7,6 +7,7 @@
   line-height: $header-line-height;
 
   @include mixins.respond(phone) {
+    margin: 15vh 5vw 0 5vw;
     font-size: $header-letters-mobile;
     line-height: $header-line-height-mobile;
   }
@@ -120,6 +121,10 @@
   flex-direction: column;
   margin: 6vh 0;
   padding: 0 5vw;
+
+  @include mixins.respond(phone) {
+    margin: 10vh 0;
+  }
 }
 
 .work-main {
@@ -127,6 +132,6 @@
   flex-direction: column;
 
   @include mixins.respond(phone) {
-    margin-top: 15vh;
+    margin-top: 0;
   }
 }
