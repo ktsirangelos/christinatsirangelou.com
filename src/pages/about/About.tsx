@@ -4,7 +4,9 @@ import "./About.scss";
 const AboutHeader = () => {
   return (
     <header className="about-header">
-      A list of all recent News, Publications and Events
+      An architectural practice that actively integrates contextual language and
+      responds to contemporary social, environmental, living, working, and
+      cultural needs.
     </header>
   );
 };

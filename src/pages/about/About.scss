@@ -1,0 +1,89 @@
+@use "../../scss/utils/mixins";
+@import "../../scss/utils/variables";
+
+.about-header {
+  margin: 20vh 5vw 0 5vw;
+  font-size: $header-letters;
+  line-height: $header-line-height;
+
+  @include mixins.respond(phone) {
+    margin: 15vh 5vw 0 5vw;
+    font-size: $header-letters-mobile;
+    line-height: $header-line-height-mobile;
+    font-size: $header-letters-mobile;
+    line-height: $header-line-height-mobile;
+  }
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 6vh;
+
+  @include mixins.respond(phone) {
+    margin-top: 15vh;
+  }
+}
+
+.about-text {
+  display: grid;
+  grid-template-areas:
+    "first third"
+    "second fourth";
+  gap: 5vh;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  padding: 0 5vw;
+
+  .frist-paragraph {
+    grid-area: first;
+  }
+  .second-paragraph {
+    grid-area: second;
+  }
+  .third-paragraph {
+    grid-area: third;
+  }
+  .fourth-paragraph {
+    grid-area: fourth;
+  }
+
+  @include mixins.respond(phone) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a svg {
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: text-bottom;
+  }
+}
+
+.clients-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  padding: 0 5vw;
+
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(5, 5fr);
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    @include mixins.respond(phone) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    a svg {
+      width: 1.1em;
+      height: 1.1em;
+      vertical-align: text-bottom;
+    }
+  }
+}
