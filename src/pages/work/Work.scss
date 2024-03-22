@@ -81,6 +81,7 @@
       font-size: $filter-letters;
       background-color: transparent;
       border: none;
+
       &:hover {
         color: orange;
       }
@@ -97,15 +98,45 @@
         grid-area: year;
       }
     }
+    transition: all 800ms ease;
 
     &-content {
-      transition: height 0.5s cubic-bezier(0, 0, 0, 1);
+      transition: height 2.5s cubic-bezier(0, 0, 0, 1);
       font-size: $filter-letters;
       border-top: 1px solid black;
     }
 
     &-panel {
-      padding: 2rem;
+      padding: 2rem 0;
+
+      .accordion-item-container {
+        padding: 0 5vw;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 10fr 5fr 5fr;
+        gap: 2rem;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          filter: opacity(85%);
+        }
+
+        .description {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 30%;
+            gap: 2rem;
+          }
+        }
+      }
     }
 
     &--expanded {
@@ -134,4 +165,8 @@
   @include mixins.respond(phone) {
     margin-top: 0;
   }
+}
+
+.szh-accordion__item-content {
+  transition: height 0.5s ease; /* Example transition for height */
 }

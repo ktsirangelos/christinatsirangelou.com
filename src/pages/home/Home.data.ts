@@ -1,11 +1,9 @@
-import landing from "@/pictures/home/landing.webp";
-
 const DESKTOP_BREAKPOINT = 600;
 
 const landingPictures = [
-  { src: landing, alt: "Pefka-7, Retziki" },
-  { src: landing, alt: "Pefka-7, Retziki" },
-  { src: landing, alt: "Pefka-7, Retziki" },
+  { src: "src/pictures/almyros/L0.webp", alt: "Pefka-7, Retziki" },
+  { src: "src/pictures/almyros/L1.webp", alt: "Pefka-7, Retziki" },
+  { src: "src/pictures/almyros/L2.webp", alt: "Pefka-7, Retziki" },
 ];
 
 const contactDetailsDesktop = {

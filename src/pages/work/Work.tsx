@@ -1,4 +1,5 @@
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
+import { Link } from "react-router-dom";
 import { projects } from "./Work.data";
 import "./Work.scss";
 
@@ -44,7 +45,10 @@ const ProjectsAccordion = () => {
   return (
     <Accordion>
       {projects.map(
-        ({ title, type, year, location, client, status, size }, id) => (
+        (
+          { title, type, year, location, client, status, size, pictures },
+          id,
+        ) => (
           <AccordionItem
             header={
               <>
@@ -55,12 +59,33 @@ const ProjectsAccordion = () => {
             }
             key={id}
           >
-            <>
-              <div className="location">{location}</div>
-              <div className="client">{client}</div>
-              <div className="status">{status}</div>
-              <div className="size">{size}sqm</div>
-            </>
+            <div className="accordion-item-container">
+              {pictures?.map((img, index) => (
+                <Link to={`/work/${title}`} key={index}>
+                  <img
+                    src={img}
+                    alt={`${title} Image ${index + 1}`}
+                    key={index}
+                  />
+                </Link>
+              ))}
+              <div className="description">
+                <div className="details">
+                  <div className="location">Location: {location}</div>
+                  <div className="client">Client: {client}</div>
+                  <div className="status">Status: {status}</div>
+                  <div className="size">Size: {size} sqm</div>
+                </div>
+                <div className="explore">
+                  <Link to={`/work/${title}`} key={`${title}-explore`}>
+                    Explore
+                    <span className="material-symbols-outlined">
+                      arrow_outward
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </AccordionItem>
         ),
       )}
