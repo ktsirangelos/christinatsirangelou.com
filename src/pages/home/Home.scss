@@ -6,8 +6,8 @@
   z-index: -1;
   font-size: $header-letters;
   line-height: $header-line-height;
-  top: 20vh;
-  left: 5vw;
+  top: $header-vertical;
+  left: $header-horizontal;
 
   .material-symbols-outlined {
     font-size: 4rem;

@@ -13,7 +13,7 @@ const AboutHeader = () => {
 
 const AboutText = () => {
   return (
-    <div className="about-text">
+    <section className="about-text">
       <p className="first-paragraph">
         Christina Tsirangelou, as an MA architect, in 2009, co-founded 157+173
         Designers, an independent Product design studio with a global reach,
@@ -41,20 +41,23 @@ const AboutText = () => {
         Sparch Architects, Arch. Prof. Rena Sakelaridou & Morpho Papanikolaou
         from 2006-2009.
       </p>
-    </div>
+    </section>
   );
 };
 
 const AboutClients = () => {
   return (
-    <div className="clients-list">
-      {clients.map(({ name, url }, id) => (
-        <div className="" key={id}>
-          <p>{name}</p>
-          <p>{url}</p>
-        </div>
-      ))}
-    </div>
+    <section className="clients">
+      <h2>Clients</h2>
+      <div className="clients-list">
+        {clients.map(({ name, url }, id) => (
+          <a key={id} href={url} target="_blank" rel="noopener noreferrer">
+            {name}
+            <span className="material-symbols-outlined">arrow_outward</span>
+          </a>
+        ))}
+      </div>
+    </section>
   );
 };
 

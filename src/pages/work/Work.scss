@@ -2,7 +2,7 @@
 @import "../../scss/utils/variables";
 
 .work-header {
-  margin: 20vh 5vw 0 5vw;
+  margin: $header-vertical $header-horizontal 0 $header-horizontal;
   font-size: $header-letters;
   line-height: $header-line-height;
 

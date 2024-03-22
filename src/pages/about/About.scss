@@ -2,7 +2,7 @@
 @import "../../scss/utils/variables";
 
 .about-header {
-  margin: 20vh 5vw 0 5vw;
+  margin: $header-vertical $header-horizontal 0 $header-horizontal;
   font-size: $header-letters;
   line-height: $header-line-height;
 
@@ -61,7 +61,7 @@
   }
 }
 
-.clients-list {
+.clients {
   display: flex;
   flex-direction: column;
   gap: 5vh;
@@ -79,11 +79,12 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
     }
+  }
+}
 
-    a svg {
-      width: 1.1em;
-      height: 1.1em;
-      vertical-align: text-bottom;
-    }
+.material-symbols-outlined {
+  font-size: 1.6rem;
+  @include mixins.respond(phone) {
+    font-size: 1.5rem;
   }
 }
