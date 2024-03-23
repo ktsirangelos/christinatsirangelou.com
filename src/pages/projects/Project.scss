@@ -1,22 +1,22 @@
-@use "../utils/mixins";
-@import "../utils/variables";
+@use "../../scss/utils/mixins";
+@import "../../scss/utils/variables";
 
-.projects-header {
+.project-header {
   margin-top: 16vh;
   display: flex;
-  padding: 0 7vw;
+  padding: 0 5vw;
   h1 {
     font-size: $header-letters-mobile;
     line-height: $header-line-height-mobile;
   }
 }
 
-.projects-main {
+.project-main {
   padding: 7vw;
   font-size: 1.5rem;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(53, 10vh);
+  grid-template-rows: repeat(54, 10vh);
 
   @include mixins.respond(phone) {
     display: flex;

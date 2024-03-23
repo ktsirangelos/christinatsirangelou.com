@@ -4,7 +4,7 @@ import { Home } from "@/pages/home/Home";
 import { Work } from "@/pages/work/Work";
 import { Public } from "@/pages/public/Public";
 import { About } from "@/pages/about/About";
-import { Project } from "@/pages/projects/Projects";
+import { Project } from "@/pages/projects/Project";
 
 const RoutesComponent = () => {
   return (
