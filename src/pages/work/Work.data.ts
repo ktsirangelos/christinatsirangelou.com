@@ -1,3 +1,6 @@
+import small1 from "@/pictures/pefka-7/camera_1.0060_small.webp";
+import small2 from "@/pictures/pefka-7/camera_8.0060_small.webp";
+
 import land1 from "@/pictures/pefka-7/camera_1.0060.webp";
 import land2 from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_01.webp";
 import land3 from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_02.webp";
@@ -17,10 +20,7 @@ export const projects = [
     client: "Farlalis Building",
     status: "In Progress",
     size: 520,
-    pictureURLs: [
-      "src/pictures/pefka-7/camera_1.0060_small.webp",
-      "src/pictures/pefka-7/camera_8.0060_small.webp",
-    ],
+    pictureURLs: [small1, small2],
     projectPage: {
       pictureURLs: {
         land1: land1,
