@@ -11,7 +11,7 @@
 
   .material-symbols-outlined {
     font-size: 4rem;
-    vertical-align: text-top;
+    vertical-align: middle;
 
     @include mixins.respond(phone) {
       font-size: 3rem;
