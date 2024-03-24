@@ -54,37 +54,73 @@ const ProjectHeader = ({ projectTitle, type, year }: ProjectHeaderProps) => (
 
 type ProjectContentProps = {
   projectData: ProjectData;
+  projectTitle?: string;
 };
 
-const ProjectContent = ({ projectData }: ProjectContentProps) => {
+const ProjectContent = ({ projectData, projectTitle }: ProjectContentProps) => {
   const { pictureURLs, text1, text2, credits } = projectData.projectPage;
 
-  const imageElements = Object.entries(pictureURLs).map(([className, url]) => (
-    <div key={className} className={className}>
-      <img src={url} alt="Project" />
-    </div>
-  ));
+  const imageElements = Object.entries(pictureURLs).map(
+    ([className, url], index) => (
+      <div key={className} className={className}>
+        <img src={url} alt={`${projectTitle}-${index + 1}`} />
+      </div>
+    ),
+  );
+
+  const renderCredits = () => {
+    const rows = [];
+
+    for (const [key, value] of Object.entries(credits)) {
+      if (Array.isArray(value)) {
+        value.forEach((val, index) => {
+          if (index === 0) {
+            rows.push(
+              <tr key={`${key}-${index}`}>
+                <td>{key}</td>
+                <td>{val}</td>
+              </tr>,
+            );
+          } else {
+            rows.push(
+              <tr key={`${key}-${index}`}>
+                <td></td>
+                <td>{val}</td>
+              </tr>,
+            );
+          }
+        });
+      } else {
+        rows.push(
+          <tr key={key}>
+            <td>{key}</td>
+            <td>{value}</td>
+          </tr>,
+        );
+      }
+    }
+
+    return <tbody>{rows}</tbody>;
+  };
 
   return (
     <>
       {imageElements}
       <div className="text1">{text1}</div>
       <div className="text2">{text2}</div>
-      <table className="credits">
-        {Object.entries(credits).map(([key, value]) => (
-          <tr key={key}>
-            <td>{key}</td>
-            <td>{Array.isArray(value) ? value.join(", ") : value}</td>
-          </tr>
-        ))}
-      </table>
+      <table className="credits">{renderCredits()}</table>
     </>
   );
 };
 
-const ProjectMain = ({ projectData }: ProjectContentProps) => (
+type ProjectMainProps = {
+  projectData: ProjectData;
+  projectTitle?: string;
+};
+
+const ProjectMain = ({ projectData, projectTitle }: ProjectMainProps) => (
   <main className="project-main">
-    <ProjectContent projectData={projectData} />
+    <ProjectContent projectData={projectData} projectTitle={projectTitle} />
   </main>
 );
 
@@ -106,7 +142,7 @@ export const Project = () => {
         type={projectData.type}
         year={projectData.year}
       />
-      <ProjectMain projectData={projectData} />
+      <ProjectMain projectData={projectData} projectTitle={projectData.title} />
     </>
   );
 };
