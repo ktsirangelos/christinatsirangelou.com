@@ -46,7 +46,7 @@ const ProjectsAccordion = () => {
     <Accordion>
       {projects.map(
         (
-          { title, type, year, location, client, status, size, pictures },
+          { title, type, year, location, client, status, size, pictureURLs },
           id,
         ) => (
           <AccordionItem
@@ -60,7 +60,7 @@ const ProjectsAccordion = () => {
             key={id}
           >
             <div className="accordion-item-container">
-              {pictures?.map((img, index) => (
+              {pictureURLs?.map((img, index) => (
                 <Link
                   className={`project-image-${index + 1}`}
                   to={`/work/${title}`}
