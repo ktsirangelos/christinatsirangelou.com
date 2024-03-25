@@ -43,16 +43,33 @@ export type Project = {
   };
 };
 
+enum ProjectCategory {
+  Architecture = "architecture",
+  Interior = "interior",
+  Product = "product",
+  Research = "research",
+  Exhibition = "exhibition",
+  Education = "education",
+}
+
+enum ProjectStatus {
+  InProgress = "In Progress",
+  Completed = "Completed",
+  Planning = "Planning",
+  OnHold = "On Hold",
+  Cancelled = "Cancelled",
+}
+
 export const projects = [
   {
     id: 1,
-    category: "architecture",
+    category: ProjectCategory.Architecture,
     title: "Pefka 7",
     type: "New Build",
     year: "2022-",
     location: "Pefka/ Retziki, Greece",
     client: "Farlalis Building",
-    status: "In Progress",
+    status: ProjectStatus.InProgress,
     size: 520,
     pictureURLs: [small1, small2],
     projectPage: {
@@ -65,10 +82,23 @@ export const projects = [
         port2: port2,
         port3: port3,
       },
-      text1:
-        "Pefka 7 is located in the suburban village of Retziki, named after the Turkish Örencik, which means 'Little Heaven', as a small settlement nestled in the heart of a pine wood forest, approximately 6 km from the city center of Thessaloniki, Greece. The current population is 13,500 inhabitants, and it continues to grow rapidly, leading to an increased demand for residential spaces. The proximity to the three main general hospitals—Papanikolaou General Hospital, Papageorgiou General Hospital, and 424 General Military Hospital of Thessaloniki—as well as the upcoming University Pediatric Hospital of Thessaloniki, expected to be completed in 2025, contributes to the development of a broader medical and social infrastructure in the area, with a focus on nature.",
-      text2:
-        "The seven residences are developed at ground level, each featuring separate courtyards on the same level. On the upper floor, there are appartments with mezzanines or attics. The lift and staircase are situated within one of the two volumes, providing access to the apartments in the other volume through a bridge above a shared green space. The residency complex comprises 1-2 or 3-bedroom apartments, each with private parking lots facing the road. In addition to the facade's material, which is covered in a neutral, clay-colored massif textured brick, the rooftop is crafted using a Mis&Hit method of brick placement. This technique conceals the necessary MEP (Mechanical, Electrical, Plumbing) equipment, preserving the distinctive clay-tiled rooftop appearance characteristic of the village.",
+      text1: `Pefka 7 is located in the suburban village of Retziki, named after the Turkish Örencik, 
+              which means 'Little Heaven', as a small settlement nestled in the heart of a pine wood forest, 
+              approximately 6 km from the city center of Thessaloniki, Greece. 
+              The current population is 13,500 inhabitants, and it continues to grow rapidly, leading to an 
+              increased demand for residential spaces. The proximity to the three main general hospitals—Papanikolaou General Hospital, 
+              Papageorgiou General Hospital, and 424 General Military Hospital of Thessaloniki—as well as the 
+              upcoming University Pediatric Hospital of Thessaloniki, expected to be completed in 2025, 
+              contributes to the development of a broader medical and social infrastructure in the area, with a focus on nature.`,
+
+      text2: `The seven residences are developed at ground level, each featuring separate courtyards on the same level. 
+              On the upper floor, there are appartments with mezzanines or attics. The lift and staircase are situated within 
+              one of the two volumes, providing access to the apartments in the other volume through a bridge above a shared green space. 
+              The residency complex comprises 1-2 or 3-bedroom apartments, each with private parking lots facing the road. 
+              In addition to the facade's material, which is covered in a neutral, clay-colored massif textured brick, 
+              the rooftop is crafted using a Mis&Hit method of brick placement. 
+              This technique conceals the necessary MEP (Mechanical, Electrical, Plumbing) equipment, preserving the distinctive 
+              clay-tiled rooftop appearance characteristic of the village.`,
       credits: {
         Architect: "Christina Tsirangelou architects",
         "Project Team": [
