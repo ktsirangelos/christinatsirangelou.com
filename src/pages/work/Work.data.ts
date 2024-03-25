@@ -1,6 +1,5 @@
 import small1 from "@/pictures/pefka-7/camera_1.0060_small.webp";
 import small2 from "@/pictures/pefka-7/camera_8.0060_small.webp";
-
 import land1 from "@/pictures/pefka-7/camera_1.0060.webp";
 import land2 from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_01.webp";
 import land3 from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_02.webp";
@@ -8,6 +7,41 @@ import land4 from "@/pictures/pefka-7/camera_8.0060.webp";
 import port1 from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_plan_grey.webp";
 import port2 from "@/pictures/pefka-7/IMG_8438_black.webp";
 import port3 from "@/pictures/pefka-7/IMG_8434_light.webp";
+
+export type Project = {
+  id: number;
+  category: string;
+  title: string;
+  type: string;
+  year: string;
+  location: string;
+  client: string;
+  status: string;
+  size: number;
+  pictureURLs: string[];
+  projectPage: {
+    pictureURLs: {
+      land1: string;
+      land2: string;
+      land3: string;
+      land4: string;
+      port1: string;
+      port2: string;
+      port3: string;
+    };
+    text1: string;
+    text2: string;
+    credits: {
+      Architect: string;
+      "Project Team": string[];
+      "Structural Engineer": string;
+      "MEP Engineer": string;
+      "Permit Consultant": string;
+      "3D Visualisation": string;
+      Materials: string[];
+    };
+  };
+};
 
 export const projects = [
   {

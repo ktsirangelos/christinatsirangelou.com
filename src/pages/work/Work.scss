@@ -69,6 +69,12 @@
   &__item {
     border-top: 1px solid black;
 
+    &.inactive {
+      .szh-accordion__item-btn {
+        color: lightgray;
+      }
+    }
+
     &-btn {
       cursor: pointer;
       display: grid;
@@ -179,8 +185,4 @@
   @include mixins.respond(phone) {
     margin-top: 0;
   }
-}
-
-.szh-accordion__item-content {
-  transition: height 0.5s ease; /* Example transition for height */
 }

@@ -1,7 +1,9 @@
+import { useEffect } from "react";
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Link } from "react-router-dom";
-import { projects } from "./Work.data";
+import { projects, Project } from "./Work.data";
 import "./Work.scss";
+import { useState } from "react";
 
 const WorkHeader = () => {
   return (
@@ -13,40 +15,76 @@ const WorkHeader = () => {
   );
 };
 
-const ProjectCategories = () => {
+type ProjectCategoriesProps = {
+  filterProjectsByCategory: (category: string) => void;
+};
+
+const ProjectCategories = ({
+  filterProjectsByCategory,
+}: ProjectCategoriesProps) => {
   return (
     <ul className="project-categories">
       <li className="all">
-        <button id="all">All</button>
+        <button onClick={() => filterProjectsByCategory("all")}>All</button>
       </li>
       <li className="arc">
-        <button id="architecture">Architecture</button>
+        <button onClick={() => filterProjectsByCategory("architecture")}>
+          Architecture
+        </button>
       </li>
       <li className="int">
-        <button id="interior">Interior</button>
+        <button onClick={() => filterProjectsByCategory("interior")}>
+          Interior
+        </button>
       </li>
       <li className="pro">
-        <button id="product">Product</button>
+        <button onClick={() => filterProjectsByCategory("product")}>
+          Product
+        </button>
       </li>
       <li className="res">
-        <button id="research">Research</button>
+        <button onClick={() => filterProjectsByCategory("research")}>
+          Researh
+        </button>
       </li>
       <li className="exh">
-        <button id="exhibition">Exhibition</button>
+        <button onClick={() => filterProjectsByCategory("exhibition")}>
+          Exhibition
+        </button>
       </li>
       <li className="edu">
-        <button id="education">Education</button>
+        <button onClick={() => filterProjectsByCategory("education")}>
+          Education
+        </button>
       </li>
     </ul>
   );
 };
 
-const ProjectsAccordion = () => {
+type ProjectsAccordionProps = {
+  projects: Project[];
+  selectedCategory: string;
+};
+
+const ProjectsAccordion = ({
+  projects,
+  selectedCategory,
+}: ProjectsAccordionProps) => {
   return (
     <Accordion>
       {projects.map(
         (
-          { title, type, year, location, client, status, size, pictureURLs },
+          {
+            title,
+            type,
+            year,
+            location,
+            client,
+            status,
+            size,
+            category,
+            pictureURLs,
+          },
           id,
         ) => (
           <AccordionItem
@@ -58,6 +96,11 @@ const ProjectsAccordion = () => {
               </>
             }
             key={id}
+            className={
+              selectedCategory !== "all" && category !== selectedCategory
+                ? "inactive"
+                : ""
+            }
           >
             <div className="accordion-item-container">
               {pictureURLs?.map((img, index) => (
@@ -98,13 +141,45 @@ const ProjectsAccordion = () => {
 };
 
 const WorkMain = () => {
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [categorizedProjects, setCategorizedProjects] =
+    useState<Project[]>(projects);
+
+  const filterProjectsByCategory = (category: string) => {
+    setSelectedCategory(category);
+
+    const sortedProjects = [...projects].sort((a, b) => {
+      if (a.category === category && b.category !== category) {
+        return -1;
+      }
+      if (a.category !== category && b.category === category) {
+        return 1;
+      }
+
+      const yearA = parseInt(a.year.split("-")[0], 10);
+      const yearB = parseInt(b.year.split("-")[0], 10);
+      return yearB - yearA;
+    });
+
+    setCategorizedProjects(sortedProjects);
+  };
+
+  useEffect(() => {
+    filterProjectsByCategory("all");
+  }, []);
+
   return (
     <main className="work-main">
       <section className="categories-filter">
-        <ProjectCategories />
+        <ProjectCategories
+          filterProjectsByCategory={filterProjectsByCategory}
+        />
       </section>
       <section className="projects-accordion">
-        <ProjectsAccordion />
+        <ProjectsAccordion
+          projects={categorizedProjects}
+          selectedCategory={selectedCategory}
+        />
       </section>
     </main>
   );

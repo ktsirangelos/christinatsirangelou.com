@@ -7,7 +7,7 @@ import landing6 from "@/pictures/home/ceiling wooden big 2.webp";
 import landing7 from "@/pictures/home/140831_MG_3919.webp";
 import landing8 from "@/pictures/home/camera_1.0060_crop.webp";
 import landing9 from "@/pictures/home/L0_DSC_0114.webp";
-import landing11 from "@/pictures/home/DSC_0099.webp";
+import landing11 from "@/pictures/home/Thessaloniki_Feta Bar2.webp";
 
 const DESKTOP_BREAKPOINT = 600;
 
