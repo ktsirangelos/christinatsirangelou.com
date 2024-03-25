@@ -22,9 +22,14 @@ const PublicationsTemplate = () => {
 const PublicationsList = () => {
   return (
     <>
-      {publications.map(({ title, type, year }, id) => (
+      {publications.map(({ title, url, type, year }, id) => (
         <div className="publication" key={id}>
-          <p>{title}</p>
+          <p>
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              {title}
+              <span className="material-symbols-outlined">arrow_outward</span>
+            </a>
+          </p>
           <p>{type}</p>
           <p>{year}</p>
         </div>
