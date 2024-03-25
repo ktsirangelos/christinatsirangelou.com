@@ -123,6 +123,15 @@
         grid-template-columns: 10fr 5fr 5fr;
         gap: 2rem;
 
+        .material-symbols-outlined {
+          font-size: 1.8rem;
+          vertical-align: text-bottom;
+
+          @include mixins.respond(phone) {
+            font-size: 1.35rem;
+          }
+        }
+
         @include mixins.respond(phone) {
           grid-template-columns: 10fr 5fr;
           font-size: 1.4rem;
