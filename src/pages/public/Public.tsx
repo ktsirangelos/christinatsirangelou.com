@@ -40,7 +40,7 @@ const PublicationsList = () => {
 
 const PublicMain = () => {
   return (
-    <main className="public-main">
+    <main className="public-main" style={{ marginBottom: "50vh" }}>
       <PublicationsTemplate />
       <PublicationsList />
     </main>
