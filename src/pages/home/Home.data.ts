@@ -7,11 +7,11 @@ import landing6 from "@/pictures/home/ceiling wooden big 2.webp";
 import landing7 from "@/pictures/home/140831_MG_3919.webp";
 import landing8 from "@/pictures/home/camera_1.0060_crop.webp";
 import landing9 from "@/pictures/home/L0_DSC_0114.webp";
-import landing11 from "@/pictures/home/Thessaloniki_Feta Bar2.webp";
+import landing10 from "@/pictures/home/Thessaloniki_Feta Bar2.webp";
 
-const DESKTOP_BREAKPOINT = 600;
+export const DESKTOP_BREAKPOINT = 600;
 
-const landingPictures = [
+export const landingPictures = [
   { src: landing1, alt: "Landing 1" },
   { src: landing2, alt: "Landing 2" },
   { src: landing3, alt: "Landing 3" },
@@ -21,10 +21,10 @@ const landingPictures = [
   { src: landing7, alt: "Landing 7" },
   { src: landing8, alt: "Landing 8" },
   { src: landing9, alt: "Landing 9" },
-  { src: landing11, alt: "Landing 11" },
+  { src: landing10, alt: "Landing 10" },
 ];
 
-const contactDetailsDesktop = {
+export const contactDetailsDesktop = {
   title: "Christina Tsirangelou αrchitects",
   contactDetails: [
     {
@@ -42,7 +42,7 @@ const contactDetailsDesktop = {
   ],
 };
 
-const contactDetailsMobile = {
+export const contactDetailsMobile = {
   title: "Christina\nTsirangelou\nαrchitects",
   contactDetails: [
     {
@@ -58,11 +58,4 @@ const contactDetailsMobile = {
       link: "tel:+306974110689",
     },
   ],
-};
-
-export {
-  DESKTOP_BREAKPOINT,
-  landingPictures,
-  contactDetailsDesktop,
-  contactDetailsMobile,
 };
