@@ -1,90 +1,86 @@
+import { DESKTOP_BREAKPOINT } from "@/utils/constants";
 import { useEffect, useState } from "react";
-import {
-  DESKTOP_BREAKPOINT,
-  contactDetailsDesktop,
-  contactDetailsMobile,
-  landingPictures,
-} from "./Home.data";
+import { contactDetails, landingPictures } from "./Home.data";
 import "./Home.scss";
 
-type ContactDetailProps = {
-  label: string;
-  link: string;
-};
-
-type ImageComponentProps = {
-  src: string;
-  alt: string;
-};
-
 const useResponsiveDetails = () => {
-  const [contactDetails, setContactDetails] = useState(
-    window.innerWidth > DESKTOP_BREAKPOINT
-      ? contactDetailsDesktop
-      : contactDetailsMobile,
+  const [isDesktop, setIsDesktop] = useState(
+    window.innerWidth > DESKTOP_BREAKPOINT,
   );
 
   useEffect(() => {
     const handleResize = () => {
-      const isDesktop = window.innerWidth > DESKTOP_BREAKPOINT;
-      setContactDetails(
-        isDesktop ? contactDetailsDesktop : contactDetailsMobile,
-      );
+      setIsDesktop(window.innerWidth > DESKTOP_BREAKPOINT);
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const formattedTitle = contactDetails.title.split("\n").map((line, index) => (
-    <span key={index}>
-      {line}
-      <br />
-    </span>
-  ));
+  const formatTitle = (title: string) => {
+    return title.split("\n").map((line, index) => <p key={index}>{line}</p>);
+  };
 
-  return { ...contactDetails, formattedTitle };
-};
-
-const ContactDetail = ({ label, link }: ContactDetailProps) => {
-  return (
-    <p>
-      <a href={link} target="_blank" rel="noopener noreferrer">
-        {label}
-        <span className="material-symbols-outlined">arrow_outward</span>
-      </a>
-    </p>
+  const contactTitle = formatTitle(
+    isDesktop ? contactDetails.title.desktop : contactDetails.title.mobile,
   );
+
+  const contactLinks = [
+    {
+      href: contactDetails.address.url,
+      text: isDesktop
+        ? contactDetails.address.desktop
+        : contactDetails.address.mobile,
+    },
+    {
+      href: contactDetails.email.url,
+      text: isDesktop
+        ? contactDetails.email.desktop
+        : contactDetails.email.mobile,
+    },
+    {
+      href: contactDetails.phone.url,
+      text: isDesktop
+        ? contactDetails.phone.desktop
+        : contactDetails.phone.mobile,
+    },
+  ];
+
+  return {
+    contactTitle,
+    contactLinks,
+  };
 };
 
 const HomeHeader = () => {
-  const { formattedTitle, contactDetails } = useResponsiveDetails();
+  const { contactTitle, contactLinks } = useResponsiveDetails();
 
   return (
     <header className="home-header">
-      <p>{formattedTitle}</p>
-      {contactDetails.map((detail, index) => (
-        <ContactDetail key={index} {...detail} />
+      {contactTitle}
+      {contactLinks.map(({ href, text }, index) => (
+        <p key={index}>
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            {text}
+            <span className="material-symbols-outlined">arrow_outward</span>
+          </a>
+        </p>
       ))}
     </header>
   );
 };
 
-const ImageComponent = ({ src, alt }: ImageComponentProps) => {
-  return <img src={src} alt={alt} />;
-};
-
 const HomeMain = () => {
   return (
     <main className="home-main">
-      {landingPictures.map((image, index) => (
-        <ImageComponent key={index} {...image} />
+      {landingPictures.map((picture) => (
+        <img key={picture.id} src={picture.src} alt={`Landing ${picture.id}`} />
       ))}
     </main>
   );
 };
 
-const Home = () => {
+export const Home = () => {
   return (
     <>
       <HomeHeader />
@@ -92,5 +88,3 @@ const Home = () => {
     </>
   );
 };
-
-export { Home };
