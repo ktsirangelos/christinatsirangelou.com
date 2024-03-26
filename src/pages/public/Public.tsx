@@ -47,7 +47,7 @@ const PublicMain = () => {
   );
 };
 
-const Public = () => {
+export const Public = () => {
   return (
     <>
       <PublicHeader />
@@ -55,5 +55,3 @@ const Public = () => {
     </>
   );
 };
-
-export { Public };

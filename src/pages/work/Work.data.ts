@@ -43,7 +43,7 @@ export type Project = {
   };
 };
 
-enum ProjectCategory {
+export enum ProjectCategory {
   Architecture = "architecture",
   Interior = "interior",
   Product = "product",
