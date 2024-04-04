@@ -6,7 +6,7 @@ import { Public } from "@/pages/public/Public";
 import { About } from "@/pages/about/About";
 import { Project } from "@/pages/projects/Project";
 
-const RoutesComponent = () => {
+export const RoutesComponent = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -22,5 +22,3 @@ const RoutesComponent = () => {
     </Routes>
   );
 };
-
-export { RoutesComponent };

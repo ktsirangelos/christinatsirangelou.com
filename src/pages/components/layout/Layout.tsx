@@ -3,7 +3,7 @@ import { NavBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
 import "./Layout.scss";
 
-const Layout = () => {
+export const Layout = () => {
   return (
     <>
       <NavBar />
@@ -12,5 +12,3 @@ const Layout = () => {
     </>
   );
 };
-
-export { Layout };
