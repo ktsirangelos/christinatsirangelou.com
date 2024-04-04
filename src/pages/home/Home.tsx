@@ -56,7 +56,7 @@ const HomeHeader = () => {
   const { contactTitle, contactLinks } = useResponsiveDetails();
 
   return (
-    <header className="home-header">
+    <header className="home-header page-header">
       {contactTitle}
       {contactLinks.map(({ href, text }, index) => (
         <p key={index}>

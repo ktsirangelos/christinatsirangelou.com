@@ -1,16 +1,6 @@
 @use "../../scss/utils/mixins";
 @import "../../scss/utils/variables";
 
-.project-header {
-  margin-top: 16vh;
-  display: flex;
-  padding: 0 5vw;
-  h1 {
-    font-size: $header-letters-mobile;
-    line-height: $header-line-height-mobile;
-  }
-}
-
 .project-main {
   padding: 5vw;
   font-size: 1.5rem;

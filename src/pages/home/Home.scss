@@ -3,11 +3,16 @@
 
 .home-header {
   position: fixed;
-  z-index: -1;
-  font-size: $header-letters;
-  line-height: $header-line-height;
   top: $header-vertical;
   left: $header-horizontal;
+  z-index: -10;
+  margin: 0;
+
+  @include mixins.respond(phone) {
+    display: inline-block;
+    left: $header-horizontal-mobile;
+    top: $header-vertical-mobile;
+  }
 
   .material-symbols-outlined {
     font-size: 4.5rem;
@@ -17,21 +22,11 @@
       font-size: 3.35rem;
     }
   }
-
-  @include mixins.respond(phone) {
-    display: inline-block;
-    position: fixed;
-    z-index: -1;
-    left: 5vw;
-    top: 15vh;
-    font-size: $header-letters-mobile;
-    line-height: $header-line-height-mobile;
-  }
 }
 
 .home-main {
   z-index: 10;
-  padding: 0vh 5vw;
+  padding: 0 $main-horizontal;
   margin-top: 50vh;
 
   @include mixins.respond(phone) {

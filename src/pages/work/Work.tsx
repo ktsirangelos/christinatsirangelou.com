@@ -16,7 +16,7 @@ type ProjectsAccordionProps = {
 
 const WorkHeader = () => {
   return (
-    <header className="work-header">
+    <header className="page-header">
       The practice delivers a wide spectrum of design services in the field of
       spatial design, such as Architectural design for New buildings and
       Interior projects, as well as Product design and Creative consultancy.

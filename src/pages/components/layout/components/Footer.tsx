@@ -1,8 +1,8 @@
 import "./Footer.scss";
 
-const Footer = () => {
+export const Footer = () => {
   return (
-    <footer>
+    <footer className="page-footer">
       <ul>
         <li className="copyright">
           <p>&copy; 2024 Christina Tsirangelou αrchitects</p>
@@ -29,5 +29,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export { Footer };

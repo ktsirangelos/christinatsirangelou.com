@@ -3,7 +3,7 @@ import "./About.scss";
 
 const AboutHeader = () => {
   return (
-    <header className="about-header">
+    <header className="page-header">
       An architectural practice that actively integrates contextual language and
       responds to contemporary social, environmental, living, working, and
       cultural needs.

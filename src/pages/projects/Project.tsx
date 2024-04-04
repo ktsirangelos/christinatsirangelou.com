@@ -44,11 +44,11 @@ type ProjectHeaderProps = {
 };
 
 const ProjectHeader = ({ projectTitle, type, year }: ProjectHeaderProps) => (
-  <header className="project-header">
-    <h1>
+  <header className="page-header">
+    <p>
       {projectTitle}, {type} <br />
       {year}
-    </h1>
+    </p>
   </header>
 );
 

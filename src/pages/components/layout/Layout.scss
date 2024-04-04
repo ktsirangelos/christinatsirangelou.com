@@ -1,0 +1,25 @@
+@use "../../../scss/utils/mixins";
+@import "../../../scss/utils/variables";
+
+.page-header {
+  margin: $header-vertical $header-horizontal 0 $header-horizontal;
+  font-size: $header-letters;
+  line-height: $header-line-height;
+
+  @include mixins.respond(phone) {
+    margin: $header-vertical-mobile $header-horizontal-mobile 0
+      $header-horizontal-mobile;
+    font-size: $header-letters-mobile;
+    line-height: $header-line-height-mobile;
+  }
+}
+
+.public-main {
+  display: flex;
+  flex-direction: column;
+  margin-top: $main-vertical-mobile;
+
+  @include mixins.respond(phone) {
+    margin-top: $main-vertical-mobile;
+  }
+}
