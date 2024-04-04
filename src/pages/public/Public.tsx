@@ -38,6 +38,8 @@ const PublicationsList = () => {
   );
 };
 
+// temporary marginBottom so that the footer doesn't appear
+// too high on the page as there are too few publications
 const PublicMain = () => {
   return (
     <main className="public-main" style={{ marginBottom: "50vh" }}>
