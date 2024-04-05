@@ -42,9 +42,11 @@ const PublicationsList = () => {
 // too high on the page as there are too few publications
 const PublicMain = () => {
   return (
-    <main className="public-main" style={{ marginBottom: "50vh" }}>
-      <PublicationsTemplate />
-      <PublicationsList />
+    <main className="page-main" style={{ marginBottom: "60vh" }}>
+      <section className="publications">
+        <PublicationsTemplate />
+        <PublicationsList />
+      </section>
     </main>
   );
 };

@@ -3,8 +3,8 @@
 
 .page-footer {
   font-size: $footer-letters;
-  padding: $footer-padding-horizontal $footer-padding-vertical;
-  margin-top: $footer-margin-vertical;
+  padding: $base-vertical-unit $base-horizontal-unit;
+  margin-top: $base-vertical-unit * 8;
 
   @include mixins.respond(phone) {
     font-size: $footer-letters-mobile;

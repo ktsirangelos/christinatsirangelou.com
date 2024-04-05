@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import "./NavBar.scss";
 
-const NavBar = () => {
+export const NavBar = () => {
   return (
-    <nav>
+    <nav className="page-navbar">
       <ul>
-        <li> 
+        <li>
           <NavLink to="/">CTα</NavLink>
         </li>
         <li>
@@ -21,5 +21,3 @@ const NavBar = () => {
     </nav>
   );
 };
-
-export { NavBar };

@@ -150,7 +150,7 @@ const WorkMain = () => {
   }, []);
 
   return (
-    <main className="work-main">
+    <main className="page-main" style={{ marginBottom: "50vh" }}>
       <section className="categories-filter">
         <ProjectCategories
           filterProjectsByCategory={filterProjectsByCategory}

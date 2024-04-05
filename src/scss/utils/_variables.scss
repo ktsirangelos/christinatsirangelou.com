@@ -20,30 +20,5 @@ $links: black;
 $links-hover: #14ff43;
 
 // Distances & Gaps
-$navbar-horizontal: 5vw;
-$navbar-horizontal-mobile: 5vw;
-$navbar-vertical: 4vh;
-$navbar-vertical-mobile: 4vh;
-
-$header-horizontal: 5vw;
-$header-horizontal-mobile: 5vw;
-$header-vertical: 20vh;
-$header-vertical-mobile: 15vh;
-
-$main-horizontal: 5vw;
-$main-horizontal-mobile: 1rem;
-$main-vertical: 6vh;
-$main-vertical-mobile: 10vh;
-
-// Footer
-$footer-padding-horizontal: 3rem;
-$footer-padding-vertical: 5vw;
-
-$footer-padding-horizontal-mobile: 1rem;
-$footer-padding-vertical-mobile: 1rem;
-
-$footer-margin-horizontal: 1rem;
-$footer-margin-vertical: 30vh;
-
-$footer-margin-horizontal-mobile: 1rem;
-$footer-margin-vertical-mobile: 1rem;
+$base-horizontal-unit: 5vw;
+$base-vertical-unit: 4vh;

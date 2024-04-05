@@ -3,15 +3,15 @@
 
 .home-header {
   position: fixed;
-  top: $header-vertical;
-  left: $header-horizontal;
+  top: $base-vertical-unit * 4;
+  left: $base-horizontal-unit;
   z-index: -10;
   margin: 0;
 
   @include mixins.respond(phone) {
     display: inline-block;
-    left: $header-horizontal-mobile;
-    top: $header-vertical-mobile;
+    left: $base-horizontal-unit;
+    top: $base-vertical-unit * 4;
   }
 
   .material-symbols-outlined {
@@ -26,7 +26,7 @@
 
 .home-main {
   z-index: 10;
-  padding: 0 $main-horizontal;
+  padding: 0 $base-horizontal-unit;
   margin-top: 50vh;
 
   @include mixins.respond(phone) {

@@ -119,7 +119,7 @@ type ProjectMainProps = {
 };
 
 const ProjectMain = ({ projectData, projectTitle }: ProjectMainProps) => (
-  <main className="project-main">
+  <main className="page-main project-main">
     <ProjectContent projectData={projectData} projectTitle={projectTitle} />
   </main>
 );

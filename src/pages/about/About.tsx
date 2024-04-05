@@ -63,7 +63,7 @@ const AboutClients = () => {
 
 const AboutMain = () => {
   return (
-    <main className="about-main">
+    <main className="page-main">
       <AboutText />
       <AboutClients />
     </main>
