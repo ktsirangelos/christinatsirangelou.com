@@ -8,7 +8,7 @@
   padding: 0 $base-horizontal-unit;
 
   @include mixins.respond(phone) {
-    margin: &base-vertical-unit 0;
+    margin: $base-vertical-unit 0;
   }
 }
 
