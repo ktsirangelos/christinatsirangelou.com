@@ -1,23 +1,12 @@
 @use "../../scss/utils/mixins";
 @import "../../scss/utils/variables";
 
-.about-main {
-  display: flex;
-  flex-direction: column;
-  gap: 5vh;
-  margin-top: 6vh;
-
-  @include mixins.respond(phone) {
-    margin-top: 10vh;
-  }
-}
-
 .about-text {
   display: grid;
   grid-template-areas:
     "first third"
     "second fourth";
-  gap: 5vh;
+  gap: $base-vertical-unit;
   font-size: 1.8rem;
   line-height: 2.5rem;
   padding: 0 5vw;
@@ -38,12 +27,6 @@
   @include mixins.respond(phone) {
     display: flex;
     flex-direction: column;
-  }
-
-  a svg {
-    width: 1.1em;
-    height: 1.1em;
-    vertical-align: text-bottom;
   }
 }
 
@@ -66,12 +49,12 @@
       gap: 1rem;
     }
   }
-}
 
-.material-symbols-outlined {
-  vertical-align: text-bottom;
-  font-size: 1.4rem;
-  @include mixins.respond(phone) {
-    font-size: 1.5rem;
+  .material-symbols-outlined {
+    vertical-align: text-bottom;
+    font-size: 1.4rem;
+    @include mixins.respond(phone) {
+      font-size: 1.5rem;
+    }
   }
 }

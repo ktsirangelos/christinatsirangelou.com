@@ -11,16 +11,16 @@ enum PublicationCategory {
 export const publications = [
   {
     id: 1,
-    title: "Social Living Greece",
+    title: "Social Living",
     url: "https://linkedin.com/company/social-living-greece/",
-    type: `${PublicationCategory.Architecture}, ${PublicationCategory.Research}`,
+    type: PublicationCategory.Research,
     year: 2024,
   },
   {
     id: 2,
     title: "a37.studio",
     url: "https://a37.studio",
-    type: `${PublicationCategory.Architecture}, ${PublicationCategory.Collaboration}`,
+    type: PublicationCategory.Collaboration,
     year: 2024,
   },
 ];

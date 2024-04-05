@@ -2,7 +2,8 @@
 @import "../../../scss/utils/variables";
 
 .page-header {
-  margin: $base-vertical-unit * 4 $base-horizontal-unit 0 $base-horizontal-unit;
+  margin: $base-vertical-unit * 5 $base-horizontal-unit $base-vertical-unit
+    $base-horizontal-unit;
   font-size: $header-letters;
   line-height: $header-line-height;
 
@@ -15,10 +16,5 @@
 .page-main {
   display: flex;
   flex-direction: column;
-  margin-top: $base-vertical-unit;
-  gap: $base-vertical-unit;
-
-  @include mixins.respond(phone) {
-    margin-top: $base-vertical-unit * 2;
-  }
+  gap: $base-vertical-unit * 2;
 }

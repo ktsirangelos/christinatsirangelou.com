@@ -3,7 +3,7 @@
 
 .home-header {
   position: fixed;
-  top: $base-vertical-unit * 4;
+  top: $base-vertical-unit * 5;
   left: $base-horizontal-unit;
   z-index: -10;
   margin: 0;
@@ -11,7 +11,7 @@
   @include mixins.respond(phone) {
     display: inline-block;
     left: $base-horizontal-unit;
-    top: $base-vertical-unit * 4;
+    top: $base-vertical-unit * 5;
   }
 
   .material-symbols-outlined {
@@ -27,18 +27,18 @@
 .home-main {
   z-index: 10;
   padding: 0 $base-horizontal-unit;
-  margin-top: 50vh;
+  margin-top: $base-vertical-unit * 12;
 
   @include mixins.respond(phone) {
-    margin-top: 55vh;
+    margin-top: $base-vertical-unit * 15;
   }
 
   img {
     width: 100%;
-    margin-bottom: 10vh;
+    margin-bottom: $base-vertical-unit * 2;
 
     @include mixins.respond(phone) {
-      margin-bottom: 3vh;
+      margin-bottom: $base-vertical-unit * 0.6;
     }
   }
 }

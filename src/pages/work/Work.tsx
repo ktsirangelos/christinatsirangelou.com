@@ -36,7 +36,7 @@ const categories = [
 
 const ProjectCategories = memo(
   ({ filterProjectsByCategory }: ProjectCategoriesProps) => (
-    <ul className="project-categories">
+    <ul className="work-categories">
       {categories.map((category) => (
         <li key={category} className={category.slice(0, 3)}>
           <button onClick={() => filterProjectsByCategory(category)}>
@@ -151,16 +151,18 @@ const WorkMain = () => {
 
   return (
     <main className="page-main" style={{ marginBottom: "50vh" }}>
-      <section className="categories-filter">
-        <ProjectCategories
-          filterProjectsByCategory={filterProjectsByCategory}
-        />
-      </section>
-      <section className="projects-accordion">
-        <ProjectsAccordion
-          projects={categorizedProjects}
-          selectedCategory={selectedCategory}
-        />
+      <section className="works">
+        <div className="categories-filter">
+          <ProjectCategories
+            filterProjectsByCategory={filterProjectsByCategory}
+          />
+        </div>
+        <div className="projects-accordion">
+          <ProjectsAccordion
+            projects={categorizedProjects}
+            selectedCategory={selectedCategory}
+          />
+        </div>
       </section>
     </main>
   );

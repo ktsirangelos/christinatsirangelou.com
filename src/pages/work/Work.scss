@@ -1,9 +1,20 @@
 @use "../../scss/utils/mixins";
 @import "../../scss/utils/variables";
 
-.project-categories {
+.categories-filter {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 $base-vertical-unit 0;
+  padding: 0 $base-horizontal-unit;
+
+  @include mixins.respond(phone) {
+    margin: &base-vertical-unit 0;
+  }
+}
+
+.work-categories {
   display: grid;
-  row-gap: 1rem;
+  row-gap: $base-vertical-unit * 0.5;
   grid-template-columns: repeat(5, 5fr);
   grid-template-areas:
     "all arc int pro res"
@@ -160,25 +171,5 @@
         background-color: white;
       }
     }
-  }
-}
-
-.categories-filter {
-  display: flex;
-  flex-direction: column;
-  margin: 6vh 0;
-  padding: 0 5vw;
-
-  @include mixins.respond(phone) {
-    margin: 10vh 0;
-  }
-}
-
-.work-main {
-  display: flex;
-  flex-direction: column;
-
-  @include mixins.respond(phone) {
-    margin-top: 0;
   }
 }
