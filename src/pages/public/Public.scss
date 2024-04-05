@@ -8,7 +8,7 @@
   padding: $base-vertical-unit * 0.5 $base-horizontal-unit;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  font-size: $publication-template-letters;
+  font-size: $font-size-medium;
 
   & .title {
     grid-area: title;
@@ -33,7 +33,7 @@
   border-bottom: 1px solid black;
 
   p {
-    font-size: $filter-letters;
+    font-size: $font-size-medium;
   }
 
   .material-symbols-outlined {

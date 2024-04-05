@@ -4,12 +4,12 @@
 .page-header {
   margin: $base-vertical-unit * 5 $base-horizontal-unit $base-vertical-unit
     $base-horizontal-unit;
-  font-size: $header-letters;
-  line-height: $header-line-height;
+  font-size: $font-size-large;
+  line-height: $line-height-large;
 
   @include mixins.respond(phone) {
-    font-size: $header-letters-mobile;
-    line-height: $header-line-height-mobile;
+    font-size: $font-size-large-mobile;
+    line-height: $line-height-large-mobile;
   }
 }
 

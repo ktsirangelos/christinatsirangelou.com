@@ -2,12 +2,12 @@
 @import "../../../../scss/utils/variables";
 
 .page-footer {
-  font-size: $footer-letters;
+  font-size: $font-size-medium;
   padding: $base-vertical-unit $base-horizontal-unit;
   margin-top: $base-vertical-unit * 8;
 
   @include mixins.respond(phone) {
-    font-size: $footer-letters-mobile;
+    font-size: $font-size-medium-mobile;
   }
 
   ul {
@@ -43,19 +43,19 @@
     }
   }
 
-  .material-symbols-outlined {
-    font-size: 1.8rem;
-    vertical-align: text-bottom;
-    @include mixins.respond(phone) {
-      font-size: 1.7rem;
-    }
-  }
-
   .insta-mobile {
     display: none;
     @include mixins.respond(phone) {
       display: inline-block;
       grid-column-start: 3;
+    }
+  }
+
+  .material-symbols-outlined {
+    font-size: 1.8rem;
+    vertical-align: text-bottom;
+    @include mixins.respond(phone) {
+      font-size: 1.7rem;
     }
   }
 

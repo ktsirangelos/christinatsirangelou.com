@@ -50,14 +50,14 @@
   }
 
   button {
-    font-size: $filter-letters;
+    font-size: $font-size-medium;
     border: none;
     background-color: transparent;
     color: black;
 
     &:hover {
       text-decoration: underline;
-      text-decoration-thickness: 1.5px;
+      text-decoration-thickness: 1px;
       cursor: pointer;
     }
   }
@@ -82,8 +82,8 @@
       justify-items: start;
       width: 100%;
       margin: 0;
-      padding: 2rem 5vw;
-      font-size: $filter-letters;
+      padding: $base-vertical-unit * 0.5 $base-horizontal-unit;
+      font-size: $font-size-medium;
       background-color: transparent;
       border: none;
       color: black;
@@ -104,32 +104,22 @@
         grid-area: year;
       }
     }
-    transition: all 800ms ease;
 
     &-content {
       transition: height 2.5s cubic-bezier(0, 0, 0, 1);
-      font-size: $filter-letters;
+      font-size: $font-size-medium;
       border-top: 1px solid black;
     }
 
     &-panel {
-      padding: 2rem 0;
+      padding: $base-horizontal-unit * 0.2 0;
 
       .accordion-item-container {
-        padding: 0 5vw;
+        padding: 0 $base-horizontal-unit;
         width: 100%;
         display: grid;
         grid-template-columns: 10fr 5fr 5fr;
-        gap: 2rem;
-
-        .material-symbols-outlined {
-          font-size: 1.8rem;
-          vertical-align: text-bottom;
-
-          @include mixins.respond(phone) {
-            font-size: 1.35rem;
-          }
-        }
+        gap: $base-horizontal-unit * 0.2;
 
         @include mixins.respond(phone) {
           grid-template-columns: 10fr 5fr;
@@ -137,6 +127,15 @@
 
           .project-image-1 {
             display: none;
+          }
+        }
+
+        .material-symbols-outlined {
+          font-size: 1.8rem;
+          vertical-align: text-bottom;
+
+          @include mixins.respond(phone) {
+            font-size: 1.35rem;
           }
         }
 

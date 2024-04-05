@@ -7,9 +7,9 @@
     "first third"
     "second fourth";
   gap: $base-vertical-unit;
-  font-size: 1.8rem;
-  line-height: 2.5rem;
-  padding: 0 5vw;
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
+  padding: 0 $base-horizontal-unit;
 
   .frist-paragraph {
     grid-area: first;
@@ -33,16 +33,16 @@
 .clients {
   display: flex;
   flex-direction: column;
-  gap: 5vh;
-  font-size: 1.8rem;
-  line-height: 2.5rem;
-  padding: 0 5vw;
+  gap: $base-vertical-unit;
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
+  padding: 0 $base-horizontal-unit;
 
   &-list {
     display: grid;
     grid-template-columns: repeat(5, 5fr);
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
 
     @include mixins.respond(phone) {
       grid-template-columns: repeat(2, 1fr);
