@@ -40,7 +40,7 @@
 
   &-list {
     display: grid;
-    grid-template-columns: repeat(5, 5fr);
+    grid-template-columns: repeat(5, 1fr);
     font-size: $font-size-small;
     line-height: $line-height-small;
 

@@ -1,7 +1,7 @@
 import { useEffect, memo } from "react";
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Link } from "react-router-dom";
-import { projects, Project } from "./Work.data";
+import { projects, ProjectType } from "./Work.data";
 import "./Work.scss";
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ type ProjectCategoriesProps = {
 };
 
 type ProjectsAccordionProps = {
-  projects: Project[];
+  projects: ProjectType[];
   selectedCategory: string;
 };
 
@@ -124,7 +124,7 @@ const ProjectsAccordion = memo(
 const WorkMain = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [categorizedProjects, setCategorizedProjects] =
-    useState<Project[]>(projects);
+    useState<ProjectType[]>(projects);
 
   const filterProjectsByCategory = (category: string) => {
     setSelectedCategory(category);

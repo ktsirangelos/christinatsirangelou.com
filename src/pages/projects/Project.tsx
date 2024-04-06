@@ -43,6 +43,16 @@ type ProjectHeaderProps = {
   year: string;
 };
 
+type ProjectMainProps = {
+  projectData: ProjectData;
+  projectTitle?: string;
+};
+
+type ProjectContentProps = {
+  projectData: ProjectData;
+  projectTitle?: string;
+};
+
 const ProjectHeader = ({ projectTitle, type, year }: ProjectHeaderProps) => (
   <header className="page-header">
     <p>
@@ -51,11 +61,6 @@ const ProjectHeader = ({ projectTitle, type, year }: ProjectHeaderProps) => (
     </p>
   </header>
 );
-
-type ProjectContentProps = {
-  projectData: ProjectData;
-  projectTitle?: string;
-};
 
 const ProjectContent = ({ projectData, projectTitle }: ProjectContentProps) => {
   const { pictureURLs, text1, text2, credits } = projectData.projectPage;
@@ -111,11 +116,6 @@ const ProjectContent = ({ projectData, projectTitle }: ProjectContentProps) => {
       <table className="credits">{renderCredits()}</table>
     </>
   );
-};
-
-type ProjectMainProps = {
-  projectData: ProjectData;
-  projectTitle?: string;
 };
 
 const ProjectMain = ({ projectData, projectTitle }: ProjectMainProps) => (
