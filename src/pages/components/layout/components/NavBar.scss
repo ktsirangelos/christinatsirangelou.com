@@ -13,11 +13,11 @@
   ul {
     display: grid;
     grid-template-columns: 10fr repeat(3, 5fr);
-    font-size: $font-size-medium;
   }
 
   li {
     align-self: center;
+    font-size: $font-size-medium;
 
     a.active {
       text-decoration: underline;
@@ -25,6 +25,7 @@
 
     @include mixins.respond(phone) {
       align-self: flex-start;
+      font-size: $font-size-medium-mobile;
     }
   }
 }

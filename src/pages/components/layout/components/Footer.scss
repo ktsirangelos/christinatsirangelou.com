@@ -2,13 +2,8 @@
 @import "../../../../scss/utils/variables";
 
 .page-footer {
-  font-size: $font-size-medium;
   padding: $base-vertical-unit $base-horizontal-unit;
   margin-top: $base-vertical-unit * 8;
-
-  @include mixins.respond(phone) {
-    font-size: $font-size-medium-mobile;
-  }
 
   ul {
     display: grid;
@@ -17,9 +12,11 @@
 
   li {
     align-self: center;
+    font-size: $font-size-medium;
 
     @include mixins.respond(phone) {
       align-self: flex-start;
+      font-size: $font-size-medium-mobile;
     }
   }
 
@@ -52,10 +49,10 @@
   }
 
   .material-symbols-outlined {
-    font-size: 1.8rem;
+    font-size: $font-size-medium;
     vertical-align: text-bottom;
     @include mixins.respond(phone) {
-      font-size: 1.7rem;
+      font-size: $font-size-medium-mobile;
     }
   }
 

@@ -66,7 +66,7 @@ export const projects = [
     category: ProjectCategory.Architecture,
     title: "Pefka 7",
     type: "New Build",
-    year: "2022–",
+    year: "2022-",
     location: "Pefka/ Retziki, Greece",
     client: "Farlalis Building",
     status: ProjectStatus.InProgress,

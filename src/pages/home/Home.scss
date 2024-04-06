@@ -15,11 +15,11 @@
   }
 
   .material-symbols-outlined {
-    font-size: 4.5rem;
+    font-size: $font-size-large;
     vertical-align: text-bottom;
 
     @include mixins.respond(phone) {
-      font-size: 3.35rem;
+      font-size: $font-size-large-mobile;
     }
   }
 }

@@ -37,12 +37,8 @@
   }
 
   .material-symbols-outlined {
-    font-size: 1.8rem;
+    font-size: $font-size-medium;
     vertical-align: text-bottom;
-
-    @include mixins.respond(phone) {
-      font-size: 1.8rem;
-    }
   }
 }
 
