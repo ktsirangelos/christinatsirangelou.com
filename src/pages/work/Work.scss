@@ -131,11 +131,11 @@
         }
 
         .material-symbols-outlined {
-          font-size: 1.8rem;
+          font-size: $font-size-medium;
           vertical-align: text-bottom;
 
           @include mixins.respond(phone) {
-            font-size: 1.35rem;
+            font-size: $font-size-small-mobile;
           }
         }
 
@@ -151,7 +151,7 @@
           justify-content: space-between;
 
           @include mixins.respond(phone) {
-            gap: 3rem;
+            gap: $base-vertical-unit * 3;
           }
 
           .details {
@@ -159,7 +159,11 @@
             flex-direction: column;
             justify-content: space-between;
             height: 30%;
-            gap: 2rem;
+            gap: $base-vertical-unit * 0.4;
+
+            @include mixins.respond(phone) {
+              gap: $base-vertical-unit * 0.8;
+            }
           }
         }
       }
