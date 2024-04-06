@@ -112,17 +112,18 @@
     }
 
     &-panel {
-      padding: $base-horizontal-unit * 0.2 0;
+      padding: $base-vertical-unit * 0.5 0;
 
       .accordion-item-container {
         padding: 0 $base-horizontal-unit;
         width: 100%;
         display: grid;
         grid-template-columns: 10fr 5fr 5fr;
-        gap: $base-horizontal-unit * 0.2;
+        gap: $base-vertical-unit * 0.5;
 
         @include mixins.respond(phone) {
           grid-template-columns: 10fr 5fr;
+          gap: $base-vertical-unit * 0.5;
           font-size: 1.4rem;
 
           .project-image-1 {
