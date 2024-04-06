@@ -55,6 +55,10 @@
     background-color: transparent;
     color: black;
 
+    @include mixins.respond(phone) {
+      font-size: $font-size-medium-mobile;
+    }
+
     &:hover {
       text-decoration: underline;
       text-decoration-thickness: 1px;
@@ -88,6 +92,10 @@
       border: none;
       color: black;
 
+      @include mixins.respond(phone) {
+        font-size: $font-size-medium-mobile;
+      }
+
       &:hover {
         color: orange;
       }
@@ -106,7 +114,6 @@
     }
 
     &-content {
-      font-size: $font-size-medium;
       border-top: 1px solid black;
     }
 
@@ -123,7 +130,6 @@
         @include mixins.respond(phone) {
           grid-template-columns: 10fr 5fr;
           gap: $base-vertical-unit * 0.5;
-          font-size: $font-size-small-mobile;
 
           .project-image-1 {
             display: none;
@@ -149,9 +155,11 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          font-size: $font-size-medium;
 
           @include mixins.respond(phone) {
-            gap: $base-vertical-unit * 3;
+            gap: $base-vertical-unit * 2;
+            font-size: $font-size-medium-mobile;
           }
 
           .details {

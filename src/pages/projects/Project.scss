@@ -2,16 +2,16 @@
 @import "../../scss/utils/variables";
 
 .project-main {
-  padding: 5vw;
-  font-size: 1.5rem;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(54, 10vh);
+  padding: 0 $base-horizontal-unit;
+  font-size: $font-size-small;
 
   @include mixins.respond(phone) {
     display: flex;
     flex-direction: column;
-    gap: 5vh;
+    gap: $base-horizontal-unit;
   }
 
   img {
@@ -24,14 +24,14 @@
 .text1,
 .text2,
 .credits {
-  font-size: 1.8rem;
-  line-height: 2.7rem;
+  font-size: $font-size-medium;
+  line-height: $line-height-medium;
 }
 
 .credits {
   @include mixins.respond(phone) {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: $font-size-tiny-mobile;
+    line-height: $line-height-small-mobile;
   }
 }
 
