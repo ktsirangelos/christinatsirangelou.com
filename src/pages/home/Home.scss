@@ -11,7 +11,7 @@
   @include mixins.respond(phone) {
     display: inline-block;
     left: $base-horizontal-unit;
-    top: $base-vertical-unit * 5;
+    top: $base-vertical-unit * 4;
   }
 
   .material-symbols-outlined {
