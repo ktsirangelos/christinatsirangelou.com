@@ -15,7 +15,7 @@
 .work-categories {
   display: grid;
   row-gap: $base-vertical-unit * 0.5;
-  grid-template-columns: repeat(5, 5fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-areas:
     "all arc int pro res"
     ". exh edu . .";
