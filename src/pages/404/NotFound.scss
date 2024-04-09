@@ -1,0 +1,15 @@
+@use "../../scss/utils/mixins";
+@import "../../scss/utils/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: $base-vertical-unit;
+
+  .link {
+    font-size: $font-size-medium;
+  }
+}

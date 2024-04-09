@@ -5,6 +5,7 @@ import { Work } from "@/pages/work/Work";
 import { Public } from "@/pages/public/Public";
 import { About } from "@/pages/about/About";
 import { Project } from "@/pages/projects/Project";
+import { NotFound } from "@/pages/404/NotFound";
 
 export const RoutesComponent = () => {
   return (
@@ -18,7 +19,7 @@ export const RoutesComponent = () => {
         <Route path="public" element={<Public />} />
         <Route path="about" element={<About />} />
       </Route>
-      <Route path="*" element={<h1>Not Found</h1>} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

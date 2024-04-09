@@ -131,7 +131,7 @@
           grid-template-columns: 10fr 5fr;
           gap: $base-vertical-unit * 0.5;
 
-          .small2 {
+          .small1 {
             display: none;
           }
         }
@@ -159,7 +159,7 @@
 
           @include mixins.respond(phone) {
             gap: $base-vertical-unit * 2;
-            font-size: $font-size-medium-mobile;
+            font-size: $font-size-small-mobile;
           }
 
           .details {

@@ -77,7 +77,11 @@ export const Project = () => {
     return (
       <main className="page-main">
         <section className="not-found">
-          <p>Project Not Found</p>
+          <p>
+            Project
+            <br /> Not
+            <br /> Found
+          </p>
         </section>
       </main>
     );
