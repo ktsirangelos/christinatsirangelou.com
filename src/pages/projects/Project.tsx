@@ -1,77 +1,32 @@
 import { useParams } from "react-router-dom";
-import { projects } from "../work/Work.data";
+import { projects, ProjectType } from "../work/Work.data";
 import "./Project.scss";
 
-type PictureURLs = {
-  land1: string;
-  land2: string;
-  land3: string;
-  land4: string;
-  port1: string;
-  port2: string;
-  port3: string;
-};
-
-type ProjectPage = {
-  pictureURLs: PictureURLs;
-  text1: string;
-  text2: string;
-  credits: Record<string, string | string[]>;
-};
-
-type ProjectData = {
-  id: number;
-  category: string;
-  title: string;
-  type: string;
-  year: string;
-  location: string;
-  client: string;
-  status: string;
-  size: number;
-  pictureURLs: string[];
-  projectPage: ProjectPage;
-};
-
-type ProjectParams = {
-  projectTitle: string;
-};
-
-type ProjectHeaderProps = {
-  projectTitle: string;
-  type: string;
-  year: string;
-};
-
-type ProjectMainProps = {
-  projectData: ProjectData;
-  projectTitle?: string;
-};
-
-type ProjectContentProps = {
-  projectData: ProjectData;
-  projectTitle?: string;
-};
-
-const ProjectHeader = ({ projectTitle, type, year }: ProjectHeaderProps) => (
+const ProjectHeader = ({ project }: { project: ProjectType }) => (
   <header className="page-header">
     <p>
-      {projectTitle}, {type} <br />
-      {year}
+      {project.title}, {project.type} <br />
+      {project.year}
     </p>
   </header>
 );
 
-const ProjectContent = ({ projectData, projectTitle }: ProjectContentProps) => {
-  const { pictureURLs, text1, text2, credits } = projectData.projectPage;
+const ProjectContent = ({ project }: { project: ProjectType }) => {
+  const { pictureURLs, texts, credits } = project.projectPageData;
 
   const imageElements = Object.entries(pictureURLs).map(
     ([className, url], index) => (
       <div key={className} className={className}>
-        <img src={url} alt={`${projectTitle}-${index + 1}`} />
+        <img src={url} alt={`${project.title}-${index + 1}`} />
       </div>
     ),
   );
+
+  const textElements = Object.entries(texts).map(([className, text], index) => (
+    <div key={index} className={className}>
+      {text}
+    </div>
+  ));
 
   const renderCredits = () => {
     const rows = [];
@@ -79,21 +34,12 @@ const ProjectContent = ({ projectData, projectTitle }: ProjectContentProps) => {
     for (const [key, value] of Object.entries(credits)) {
       if (Array.isArray(value)) {
         value.forEach((val, index) => {
-          if (index === 0) {
-            rows.push(
-              <tr key={`${key}-${index}`}>
-                <td>{key}</td>
-                <td>{val}</td>
-              </tr>,
-            );
-          } else {
-            rows.push(
-              <tr key={`${key}-${index}`}>
-                <td></td>
-                <td>{val}</td>
-              </tr>,
-            );
-          }
+          rows.push(
+            <tr key={`${key}-${index}`}>
+              <td>{index === 0 ? key : ""}</td>
+              <td>{val}</td>
+            </tr>,
+          );
         });
       } else {
         rows.push(
@@ -111,38 +57,36 @@ const ProjectContent = ({ projectData, projectTitle }: ProjectContentProps) => {
   return (
     <>
       {imageElements}
-      <div className="text1">{text1}</div>
-      <div className="text2">{text2}</div>
+      {textElements}
       <table className="credits">{renderCredits()}</table>
     </>
   );
 };
 
-const ProjectMain = ({ projectData, projectTitle }: ProjectMainProps) => (
+const ProjectMain = ({ project }: { project: ProjectType }) => (
   <main className="project-main">
-    <ProjectContent projectData={projectData} projectTitle={projectTitle} />
+    <ProjectContent project={project} />
   </main>
 );
 
 export const Project = () => {
-  const { projectTitle } = useParams<ProjectParams>();
+  const { projectTitle } = useParams();
+  const project = projects.find((project) => project.title === projectTitle);
 
-  const projectData = projects.find(
-    (project) => project.title === projectTitle,
-  );
-
-  if (!projectData) {
-    return <div>Project not found</div>;
+  if (!project) {
+    return (
+      <main className="page-main">
+        <section className="not-found">
+          <p>Project Not Found</p>
+        </section>
+      </main>
+    );
   }
 
   return (
     <>
-      <ProjectHeader
-        projectTitle={projectData.title}
-        type={projectData.type}
-        year={projectData.year}
-      />
-      <ProjectMain projectData={projectData} projectTitle={projectData.title} />
+      <ProjectHeader project={project} />
+      <ProjectMain project={project} />
     </>
   );
 };
