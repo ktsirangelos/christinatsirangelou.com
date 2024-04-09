@@ -1,13 +1,20 @@
 @use "../utils/mixins";
 @import "../utils/variables";
 
+@font-face {
+  font-family: "nimbus_sans_lregular";
+  src: url("NimbusSanL-Reg-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "HelveticaNeue-Light", sans-serif;
+  font-family: "nimbus_sans_lregular", sans-serif;
   font-weight: 100;
   scroll-behavior: smooth;
 }
