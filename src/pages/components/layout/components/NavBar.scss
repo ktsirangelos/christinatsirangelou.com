@@ -21,6 +21,7 @@
 
     a.active {
       text-decoration: underline;
+      text-decoration-thickness: 1px;
     }
 
     @include mixins.respond(phone) {
