@@ -46,7 +46,8 @@
 
     @include mixins.respond(phone) {
       grid-template-columns: repeat(2, 1fr);
-      gap: $base-vertical-unit;
+      font-size: $font-size-small-mobile;
+      line-height: $line-height-small-mobile;
     }
   }
 
