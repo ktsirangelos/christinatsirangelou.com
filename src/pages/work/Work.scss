@@ -141,7 +141,7 @@
           vertical-align: text-bottom;
 
           @include mixins.respond(phone) {
-            font-size: $font-size-small-mobile;
+            font-size: $font-size-medium-mobile;
           }
         }
 
