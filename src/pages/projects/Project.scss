@@ -144,4 +144,7 @@
   height: 100vh;
   padding: 0 $base-horizontal-unit;
   font-size: $font-size-large;
+  @include mixins.respond(phone) {
+    font-size: $font-size-large-mobile;
+  }
 }
