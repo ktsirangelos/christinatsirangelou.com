@@ -83,14 +83,10 @@ const ProjectsAccordion = memo(
               }
             >
               <div className="accordion-item-container">
-                {pictureURLs?.map((img, index) => (
-                  <Link
-                    className={`project-image-${index + 1}`}
-                    to={`/work/${title}`}
-                    key={index}
-                  >
+                {Object.entries(pictureURLs).map(([className, url], index) => (
+                  <Link key={index} className={className} to={`/work/${title}`}>
                     <img
-                      src={img}
+                      src={url}
                       alt={`${title} Image ${index + 1}`}
                       key={index}
                     />

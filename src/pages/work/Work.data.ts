@@ -18,7 +18,7 @@ export type ProjectType = {
   client: string;
   status: string;
   size: number;
-  pictureURLs: string[];
+  pictureURLs: { small1: string; small2: string };
   projectPageData: {
     pictureURLs: {
       land1: string;
@@ -73,7 +73,7 @@ export const projects = [
     client: "Farlalis Building",
     status: ProjectStatus.InProgress,
     size: 520,
-    pictureURLs: [small1, small2],
+    pictureURLs: { small1: small1, small2: small2 },
     projectPageData: {
       pictureURLs: {
         land1: land1,
