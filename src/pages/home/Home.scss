@@ -27,7 +27,7 @@
 .home-main {
   z-index: 10;
   padding: 0 $base-horizontal-unit;
-  margin-top: $base-vertical-unit * 15;
+  margin-top: $base-vertical-unit * 12.5;
 
   @include mixins.respond(phone) {
     margin-top: $base-vertical-unit * 15;
