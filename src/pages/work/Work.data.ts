@@ -64,7 +64,7 @@ export const projects = [
   {
     id: 1,
     category: ProjectCategory.Architecture,
-    title: "Pefka 7",
+    title: "Pefka_7",
     type: "New Build",
     year: "2022-",
     location: "Pefka/ Retziki, Greece",
