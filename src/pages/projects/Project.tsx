@@ -12,7 +12,7 @@ const ProjectHeader = ({ project }: { project: ProjectType }) => (
 );
 
 const ProjectContent = ({ project }: { project: ProjectType }) => {
-  const { pictureURLs, text1, text2, credits } = project.projectPage;
+  const { pictureURLs, texts, credits } = project.projectPageData;
 
   const imageElements = Object.entries(pictureURLs).map(
     ([className, url], index) => (
@@ -21,6 +21,12 @@ const ProjectContent = ({ project }: { project: ProjectType }) => {
       </div>
     ),
   );
+
+  const textElements = Object.entries(texts).map(([className, text], index) => (
+    <div key={index} className={className}>
+      {text}
+    </div>
+  ));
 
   const renderCredits = () => {
     const rows = [];
@@ -51,8 +57,7 @@ const ProjectContent = ({ project }: { project: ProjectType }) => {
   return (
     <>
       {imageElements}
-      <div className="text1">{text1}</div>
-      <div className="text2">{text2}</div>
+      {textElements}
       <table className="credits">{renderCredits()}</table>
     </>
   );
