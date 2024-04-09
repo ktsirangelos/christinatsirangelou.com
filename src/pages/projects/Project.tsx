@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { projects, ProjectType } from "../work/Work.data";
+import { ProjectNotFound } from "../404/NotFound";
 import "./Project.scss";
 
 const ProjectHeader = ({ project }: { project: ProjectType }) => (
@@ -74,17 +75,7 @@ export const Project = () => {
   const project = projects.find((project) => project.title === projectTitle);
 
   if (!project) {
-    return (
-      <main className="page-main">
-        <section className="not-found">
-          <p>
-            Project
-            <br /> Not
-            <br /> Found
-          </p>
-        </section>
-      </main>
-    );
+    return <ProjectNotFound />;
   }
 
   return (
