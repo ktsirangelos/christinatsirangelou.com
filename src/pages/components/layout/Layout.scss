@@ -11,6 +11,17 @@
     font-size: $font-size-large-mobile;
     line-height: $line-height-large-mobile;
   }
+
+  h1,
+  h2 {
+    font-size: $font-size-large;
+    line-height: $line-height-large;
+
+    @include mixins.respond(phone) {
+      font-size: $font-size-large-mobile;
+      line-height: $line-height-large-mobile;
+    }
+  }
 }
 
 .page-main {

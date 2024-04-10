@@ -19,6 +19,10 @@
     align-self: center;
     font-size: $font-size-medium;
 
+    h1 {
+      font-size: $font-size-medium;
+    }
+
     a.active {
       text-decoration: underline;
       text-decoration-thickness: 1px;
@@ -27,6 +31,10 @@
     @include mixins.respond(phone) {
       align-self: flex-start;
       font-size: $font-size-medium-mobile;
+
+      h1 {
+        font-size: $font-size-medium-mobile;
+      }
     }
   }
 }

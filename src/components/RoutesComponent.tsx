@@ -6,18 +6,19 @@ import { Public } from "@/pages/public/Public";
 import { About } from "@/pages/about/About";
 import { Project } from "@/pages/projects/Project";
 import { PageNotFound } from "@/pages/404/NotFound";
+import { RouteNames } from "@/utils/routes";
 
 export const RoutesComponent = () => {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path={RouteNames.HOME} element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path={"work"}>
+        <Route path={RouteNames.WORK}>
           <Route index element={<Work />} />
           <Route path=":projectTitle" element={<Project />} />
         </Route>
-        <Route path="public" element={<Public />} />
-        <Route path="about" element={<About />} />
+        <Route path={RouteNames.PUBLIC} element={<Public />} />
+        <Route path={RouteNames.ABOUT} element={<About />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>

@@ -34,9 +34,11 @@
   display: flex;
   flex-direction: column;
   gap: $base-vertical-unit;
-  font-size: $font-size-medium;
-  line-height: $line-height-medium;
   padding: 0 $base-horizontal-unit;
+
+  h2 {
+    font-size: $font-size-large;
+  }
 
   &-list {
     display: grid;

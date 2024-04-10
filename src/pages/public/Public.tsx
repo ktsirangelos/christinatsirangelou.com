@@ -4,7 +4,7 @@ import "./Public.scss";
 const PublicHeader = () => {
   return (
     <header className="page-header">
-      A list of all recent News, Publications and Events
+      <h2>A list of all recent News, Publications and Events</h2>
     </header>
   );
 };
