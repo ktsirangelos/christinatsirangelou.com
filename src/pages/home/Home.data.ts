@@ -10,16 +10,56 @@ import landing9 from "@/pictures/home/L0_DSC_0114.webp";
 import landing10 from "@/pictures/home/Thessaloniki_Feta Bar2.webp";
 
 export const landingPictures = [
-  { id: 1, src: landing1 },
-  { id: 2, src: landing2 },
-  { id: 3, src: landing3 },
-  { id: 4, src: landing4 },
-  { id: 5, src: landing5 },
-  { id: 6, src: landing6 },
-  { id: 7, src: landing7 },
-  { id: 8, src: landing8 },
-  { id: 9, src: landing9 },
-  { id: 10, src: landing10 },
+  {
+    id: 1,
+    srcMobile: landing1,
+    srcDesktop: landing1,
+  },
+  {
+    id: 2,
+    srcMobile: landing2,
+    srcDesktop: landing2,
+  },
+  {
+    id: 3,
+    srcMobile: landing3,
+    srcDesktop: landing3,
+  },
+  {
+    id: 4,
+    srcMobile: landing4,
+    srcDesktop: landing4,
+  },
+  {
+    id: 5,
+    srcMobile: landing5,
+    srcDesktop: landing5,
+  },
+  {
+    id: 6,
+    srcMobile: landing6,
+    srcDesktop: landing6,
+  },
+  {
+    id: 7,
+    srcMobile: landing7,
+    srcDesktop: landing7,
+  },
+  {
+    id: 8,
+    srcMobile: landing8,
+    srcDesktop: landing8,
+  },
+  {
+    id: 9,
+    srcMobile: landing9,
+    srcDesktop: landing9,
+  },
+  {
+    id: 10,
+    src: landing10,
+    srcLarge: landing10,
+  },
 ];
 
 export const contactDetails = {

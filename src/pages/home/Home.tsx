@@ -74,7 +74,10 @@ const HomeMain = () => {
   return (
     <main className="home-main">
       {landingPictures.map((picture) => (
-        <img key={picture.id} src={picture.src} alt={`Landing ${picture.id}`} />
+        <picture key={picture.id}>
+          <source media="(min-width: 75em)" srcSet={picture.srcDesktop} />
+          <img src={picture.srcMobile} alt={`Landing ${picture.id}`} />
+        </picture>
       ))}
     </main>
   );
