@@ -13,15 +13,15 @@ const ProjectHeader = ({ project }: { project: ProjectType }) => (
 );
 
 const ProjectContent = ({ project }: { project: ProjectType }) => {
-  const { pictureURLs, texts, credits } = project.projectPageData;
+  const { pictures, texts, credits } = project.projectPageData;
 
-  const imageElements = Object.entries(pictureURLs).map(
-    ([className, url], index) => (
-      <div key={className} className={className}>
-        <img src={url} alt={`${project.title}-${index + 1}`} />
-      </div>
-    ),
-  );
+  const imageElements = pictures.map((picture) => (
+    <picture key={picture.id} className={picture.id}>
+      <source media="(min-width: 112.5em)" srcSet={picture.srcDesktop} />
+      <source media="(min-width: 75em)" srcSet={picture.srcLaptop} />
+      <img src={picture.srcMobile} alt={`Landing ${picture.id}`} />
+    </picture>
+  ));
 
   const textElements = Object.entries(texts).map(([className, text], index) => (
     <div key={index} className={className}>

@@ -65,7 +65,7 @@ const ProjectsAccordion = memo(
               status,
               size,
               category,
-              pictureURLs,
+              pictures,
             },
             id,
           ) => (
@@ -85,13 +85,22 @@ const ProjectsAccordion = memo(
               }
             >
               <div className="accordion-item-container">
-                {Object.entries(pictureURLs).map(([className, url], index) => (
-                  <Link key={index} className={className} to={`/work/${title}`}>
-                    <img
-                      src={url}
-                      alt={`${title} Image ${index + 1}`}
-                      key={index}
-                    />
+                {pictures.map((picture) => (
+                  <Link key={picture.id} to={`/work/${title}`}>
+                    <picture>
+                      <source
+                        media="(min-width: 112.5em)"
+                        srcSet={picture.srcDesktop}
+                      />
+                      <source
+                        media="(min-width: 75em)"
+                        srcSet={picture.srcLaptop}
+                      />
+                      <img
+                        src={picture.srcMobile}
+                        alt={`Landing ${picture.id}`}
+                      />
+                    </picture>
                   </Link>
                 ))}
                 <div className="description">
