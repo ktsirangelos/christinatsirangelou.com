@@ -5,10 +5,10 @@ import "./Project.scss";
 
 const ProjectHeader = ({ project }: { project: ProjectType }) => (
   <header className="page-header">
-    <p>
+    <h2>
       {project.title}, {project.type} <br />
       {project.year}
-    </p>
+    </h2>
   </header>
 );
 
@@ -24,9 +24,9 @@ const ProjectContent = ({ project }: { project: ProjectType }) => {
   ));
 
   const textElements = Object.entries(texts).map(([className, text], index) => (
-    <div key={index} className={className}>
+    <p key={index} className={className}>
       {text}
-    </div>
+    </p>
   ));
 
   const renderCredits = () => {
