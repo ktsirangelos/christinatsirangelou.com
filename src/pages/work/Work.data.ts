@@ -192,8 +192,6 @@ export const projects = [
         "Permit Consultant": ["Irini Farkona"],
         "3D Visualisation": ["Loukas Koutsouris - Mirror Visuals"],
         Materials: [
-          "Santanselmo, IT",
-          "Projetto Materials, GR",
           "Epal, Windows & Doors, GR",
         ],
       },
