@@ -109,7 +109,7 @@ export const contactDetails = {
   address: {
     desktop: "Dionysiou Areopagitou 37, Athens",
     mobile: "Address",
-    url: "https://goo.gl/maps/yRpUKarCFu8uGnvj6",
+    url: "https://maps.app.goo.gl/Ci85ecDu69r8gXfz8",
   },
   email: {
     desktop: "info@christinatsirangelou.com",
