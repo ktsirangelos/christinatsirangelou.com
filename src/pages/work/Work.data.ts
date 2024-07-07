@@ -1,38 +1,38 @@
-import small1_mobile from "@/pictures/pefka-7/camera_1.0060_small_mobile.webp";
-import small1_laptop from "@/pictures/pefka-7/camera_1.0060_small.webp";
-import small1_desktop from "@/pictures/pefka-7/camera_1.0060_small.webp";
+import small1_mobile from "@/pictures/pefka-7/Facade_mobile.webp";
+import small1_laptop from "@/pictures/pefka-7/Facade_mobile.webp";
+import small1_desktop from "@/pictures/pefka-7/Facade_mobile.webp";
 
-import small2_mobile from "@/pictures/pefka-7/camera_8.0060_small_mobile.webp";
-import small2_laptop from "@/pictures/pefka-7/camera_8.0060_small.webp";
-import small2_desktop from "@/pictures/pefka-7/camera_8.0060_small.webp";
+import small2_mobile from "@/pictures/pefka-7/Entance_mobile.webp";
+import small2_laptop from "@/pictures/pefka-7/Entance_mobile.webp";
+import small2_desktop from "@/pictures/pefka-7/Entance_mobile.webp";
 
-import land1_mobile from "@/pictures/pefka-7/camera_1.0060.webp";
-import land1_laptop from "@/pictures/pefka-7/camera_1.0060.webp";
-import land1_desktop from "@/pictures/pefka-7/camera_1.0060.webp";
+import land1_mobile from "@/pictures/pefka-7/Facade_mobile.webp";
+import land1_laptop from "@/pictures/pefka-7/Facade_laptop.webp";
+import land1_desktop from "@/pictures/pefka-7/Facade_desktop.webp";
 
-import land2_mobile from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_01.webp";
-import land2_laptop from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_01.webp";
-import land2_desktop from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_01.webp";
+import land2_mobile from "@/pictures/pefka-7/Diagram-Rooftop_01_mobile.webp";
+import land2_laptop from "@/pictures/pefka-7/Diagram-Rooftop_01_laptop.webp";
+import land2_desktop from "@/pictures/pefka-7/Diagram-Rooftop_01_desktop.webp";
 
-import land3_mobile from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_02.webp";
-import land3_laptop from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_02.webp";
-import land3_desktop from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_02.webp";
+import land3_mobile from "@/pictures/pefka-7/Diagram-Rooftop_02_mobile.webp";
+import land3_laptop from "@/pictures/pefka-7/Diagram-Rooftop_02_laptop.webp";
+import land3_desktop from "@/pictures/pefka-7/Diagram-Rooftop_02_desktop.webp";
 
-import land4_mobile from "@/pictures/pefka-7/camera_8.0060.webp";
-import land4_laptop from "@/pictures/pefka-7/camera_8.0060.webp";
-import land4_desktop from "@/pictures/pefka-7/camera_8.0060.webp";
+import land4_mobile from "@/pictures/pefka-7/Entance_mobile.webp";
+import land4_laptop from "@/pictures/pefka-7/Entance_laptop.webp";
+import land4_desktop from "@/pictures/pefka-7/Entance_desktop.webp";
 
-import port1_mobile from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_plan_grey.webp";
-import port1_laptop from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_plan_grey.webp";
-import port1_desktop from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_plan_grey.webp";
+import port1_mobile from "@/pictures/pefka-7/Diagram_fp_mobile.webp";
+import port1_laptop from "@/pictures/pefka-7/Diagram_fp_laptop.webp";
+import port1_desktop from "@/pictures/pefka-7/Diagram_fp_desktop.webp";
 
-import port2_mobile from "@/pictures/pefka-7/IMG_8438_black.webp";
-import port2_laptop from "@/pictures/pefka-7/IMG_8438_black.webp";
-import port2_desktop from "@/pictures/pefka-7/IMG_8438_black.webp";
+import port2_mobile from "@/pictures/pefka-7/MaterialPalette_01_mobile.webp";
+import port2_laptop from "@/pictures/pefka-7/MaterialPalette_01_laptop.webp";
+import port2_desktop from "@/pictures/pefka-7/MaterialPalette_01_desktop.webp";
 
-import port3_mobile from "@/pictures/pefka-7/IMG_8434_light.webp";
-import port3_laptop from "@/pictures/pefka-7/IMG_8434_light.webp";
-import port3_desktop from "@/pictures/pefka-7/IMG_8434_light.webp";
+import port3_mobile from "@/pictures/pefka-7/MaterialPalette_02_mobile.webp";
+import port3_laptop from "@/pictures/pefka-7/MaterialPalette_02_laptop.webp";
+import port3_desktop from "@/pictures/pefka-7/MaterialPalette_02_desktop.webp";
 
 export type ProjectType = {
   id: number;
@@ -191,9 +191,7 @@ export const projects = [
         "MEP Engineer": ["Stelios Avramis"],
         "Permit Consultant": ["Irini Farkona"],
         "3D Visualisation": ["Loukas Koutsouris - Mirror Visuals"],
-        Materials: [
-          "Epal, Windows & Doors, GR",
-        ],
+        Materials: ["Epal, Windows & Doors, GR"],
       },
     },
   },
