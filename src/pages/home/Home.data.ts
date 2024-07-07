@@ -1,25 +1,104 @@
-import landing1 from "@/pictures/home/Corfu_5star hotel1.webp";
-import landing2 from "@/pictures/home/DSC_0030 copy 2.webp";
-import landing3 from "@/pictures/home/L0_1102_USP_Linving_Ap_Cam001 copy.webp";
-import landing4 from "@/pictures/home/01-157173_pizzapls_y1440.webp";
-import landing5 from "@/pictures/home/L0_CAM_01.webp";
-import landing6 from "@/pictures/home/ceiling wooden big 2.webp";
-import landing7 from "@/pictures/home/140831_MG_3919.webp";
-import landing8 from "@/pictures/home/camera_1.0060_crop.webp";
-import landing9 from "@/pictures/home/L0_DSC_0114.webp";
-import landing10 from "@/pictures/home/Thessaloniki_Feta Bar2.webp";
+import landing1_mobile from "@/pictures/home/Corfu_Resort_mobile.webp";
+import landing1_laptop from "@/pictures/home/Corfu_Resort_laptop.webp";
+import landing1_desktop from "@/pictures/home/Corfu_Resort_desktop.webp";
+
+import landing2_mobile from "@/pictures/home/Thessaloniki_Ekies_mobile.webp";
+import landing2_laptop from "@/pictures/home/Thessaloniki_Ekies_laptop.webp";
+import landing2_desktop from "@/pictures/home/Thessaloniki_Ekies_desktop.webp";
+
+import landing3_mobile from "@/pictures/home/Athens_Residence_mobile.webp";
+import landing3_laptop from "@/pictures/home/Athens_Residence_laptop.webp";
+import landing3_desktop from "@/pictures/home/Athens_Residence_desktop.webp";
+
+import landing4_mobile from "@/pictures/home/London_Cafe_mobile.webp";
+import landing4_laptop from "@/pictures/home/London_Cafe_laptop.webp";
+import landing4_desktop from "@/pictures/home/London_Cafe_desktop.webp";
+
+import landing5_mobile from "@/pictures/home/Ellinikon_FutureLiving_mobile.webp";
+import landing5_laptop from "@/pictures/home/Ellinikon_FutureLiving_laptop.webp";
+import landing5_desktop from "@/pictures/home/Ellinikon_FutureLiving_desktop.webp";
+
+import landing6_mobile from "@/pictures/home/Pefka7_Residence_mobile.webp";
+import landing6_laptop from "@/pictures/home/Pefka7_Residence_laptop.webp";
+import landing6_desktop from "@/pictures/home/Pefka7_Residence_desktop.webp";
+
+import landing7_mobile from "@/pictures/home/Product_Carpet_mobile.webp";
+import landing7_laptop from "@/pictures/home/Product_Carpet_laptop.webp";
+import landing7_desktop from "@/pictures/home/Product_Carpet_desktop.webp";
+
+import landing8_mobile from "@/pictures/home/Product_Lamp_WoodenBig_mobile.webp";
+import landing8_laptop from "@/pictures/home/Product_Lamp_WoodenBig_laptop.webp";
+import landing8_desktop from "@/pictures/home/Product_Lamp_WoodenBig_desktop.webp";
+
+import landing9_mobile from "@/pictures/home/Thessaloniki_PizzaPlease_mobile.webp";
+import landing9_laptop from "@/pictures/home/Thessaloniki_PizzaPlease_laptop.webp";
+import landing9_desktop from "@/pictures/home/Thessaloniki_PizzaPlease_desktop.webp";
+
+import landing10_mobile from "@/pictures/home/Thessaloniki_FetaBar_mobile.webp";
+import landing10_laptop from "@/pictures/home/Thessaloniki_FetaBar_laptop.webp";
+import landing10_desktop from "@/pictures/home/Thessaloniki_FetaBar_desktop.webp";
 
 export const landingPictures = [
-  { id: 1, src: landing1 },
-  { id: 2, src: landing2 },
-  { id: 3, src: landing3 },
-  { id: 4, src: landing4 },
-  { id: 5, src: landing5 },
-  { id: 6, src: landing6 },
-  { id: 7, src: landing7 },
-  { id: 8, src: landing8 },
-  { id: 9, src: landing9 },
-  { id: 10, src: landing10 },
+  {
+    id: 1,
+    srcMobile: landing1_mobile,
+    srcLaptop: landing1_laptop,
+    srcDesktop: landing1_desktop,
+  },
+  {
+    id: 2,
+    srcMobile: landing2_mobile,
+    srcLaptop: landing2_laptop,
+    srcDesktop: landing2_desktop,
+  },
+  {
+    id: 3,
+    srcMobile: landing3_mobile,
+    srcLaptop: landing3_laptop,
+    srcDesktop: landing3_desktop,
+  },
+  {
+    id: 4,
+    srcMobile: landing4_mobile,
+    srcLaptop: landing4_laptop,
+    srcDesktop: landing4_desktop,
+  },
+  {
+    id: 5,
+    srcMobile: landing5_mobile,
+    srcLaptop: landing5_laptop,
+    srcDesktop: landing5_desktop,
+  },
+  {
+    id: 6,
+    srcMobile: landing6_mobile,
+    srcLaptop: landing6_laptop,
+    srcDesktop: landing6_desktop,
+  },
+  {
+    id: 7,
+    srcMobile: landing7_mobile,
+    srcLaptop: landing7_laptop,
+    srcDesktop: landing7_desktop,
+  },
+  {
+    id: 8,
+    srcMobile: landing8_mobile,
+    srcLaptop: landing8_laptop,
+    srcDesktop: landing8_desktop,
+  },
+  {
+    id: 9,
+    srcMobile: landing9_mobile,
+    srcLaptop: landing9_laptop,
+    srcDesktop: landing9_desktop,
+  },
+  {
+    id: 10,
+    srcMobile: landing10_mobile,
+    srcLaptop: landing10_laptop,
+    srcDesktop: landing10_desktop,
+  },
 ];
 
 export const contactDetails = {
@@ -30,7 +109,7 @@ export const contactDetails = {
   address: {
     desktop: "Dionysiou Areopagitou 37, Athens",
     mobile: "Address",
-    url: "https://goo.gl/maps/yRpUKarCFu8uGnvj6",
+    url: "https://maps.app.goo.gl/Ci85ecDu69r8gXfz8",
   },
   email: {
     desktop: "info@christinatsirangelou.com",

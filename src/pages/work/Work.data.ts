@@ -1,12 +1,38 @@
-import small1 from "@/pictures/pefka-7/camera_1.0060_small.webp";
-import small2 from "@/pictures/pefka-7/camera_8.0060_small.webp";
-import land1 from "@/pictures/pefka-7/camera_1.0060.webp";
-import land2 from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_01.webp";
-import land3 from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_02.webp";
-import land4 from "@/pictures/pefka-7/camera_8.0060.webp";
-import port1 from "@/pictures/pefka-7/Sigkrotima 7 Katoikion_2023.12.30_Diagramforsite_plan_grey.webp";
-import port2 from "@/pictures/pefka-7/IMG_8438_black.webp";
-import port3 from "@/pictures/pefka-7/IMG_8434_light.webp";
+import small1_mobile from "@/pictures/pefka-7/Facade_mobile.webp";
+import small1_laptop from "@/pictures/pefka-7/Facade_mobile.webp";
+import small1_desktop from "@/pictures/pefka-7/Facade_mobile.webp";
+
+import small2_mobile from "@/pictures/pefka-7/Entance_mobile.webp";
+import small2_laptop from "@/pictures/pefka-7/Entance_mobile.webp";
+import small2_desktop from "@/pictures/pefka-7/Entance_mobile.webp";
+
+import land1_mobile from "@/pictures/pefka-7/Facade_mobile.webp";
+import land1_laptop from "@/pictures/pefka-7/Facade_laptop.webp";
+import land1_desktop from "@/pictures/pefka-7/Facade_desktop.webp";
+
+import land2_mobile from "@/pictures/pefka-7/Diagram-Rooftop_01_mobile.webp";
+import land2_laptop from "@/pictures/pefka-7/Diagram-Rooftop_01_laptop.webp";
+import land2_desktop from "@/pictures/pefka-7/Diagram-Rooftop_01_desktop.webp";
+
+import land3_mobile from "@/pictures/pefka-7/Diagram-Rooftop_02_mobile.webp";
+import land3_laptop from "@/pictures/pefka-7/Diagram-Rooftop_02_laptop.webp";
+import land3_desktop from "@/pictures/pefka-7/Diagram-Rooftop_02_desktop.webp";
+
+import land4_mobile from "@/pictures/pefka-7/Entance_mobile.webp";
+import land4_laptop from "@/pictures/pefka-7/Entance_laptop.webp";
+import land4_desktop from "@/pictures/pefka-7/Entance_desktop.webp";
+
+import port1_mobile from "@/pictures/pefka-7/Diagram_fp_mobile.webp";
+import port1_laptop from "@/pictures/pefka-7/Diagram_fp_laptop.webp";
+import port1_desktop from "@/pictures/pefka-7/Diagram_fp_desktop.webp";
+
+import port2_mobile from "@/pictures/pefka-7/MaterialPalette_01_mobile.webp";
+import port2_laptop from "@/pictures/pefka-7/MaterialPalette_01_laptop.webp";
+import port2_desktop from "@/pictures/pefka-7/MaterialPalette_01_desktop.webp";
+
+import port3_mobile from "@/pictures/pefka-7/MaterialPalette_02_mobile.webp";
+import port3_laptop from "@/pictures/pefka-7/MaterialPalette_02_laptop.webp";
+import port3_desktop from "@/pictures/pefka-7/MaterialPalette_02_desktop.webp";
 
 export type ProjectType = {
   id: number;
@@ -18,17 +44,19 @@ export type ProjectType = {
   client: string;
   status: string;
   size: number;
-  pictureURLs: { small1: string; small2: string };
+  pictures: {
+    id: number;
+    srcMobile: string;
+    srcLaptop: string;
+    srcDesktop: string;
+  }[];
   projectPageData: {
-    pictureURLs: {
-      land1: string;
-      land2: string;
-      land3: string;
-      land4: string;
-      port1: string;
-      port2: string;
-      port3: string;
-    };
+    pictures: {
+      id: string;
+      srcMobile: string;
+      srcLaptop: string;
+      srcDesktop: string;
+    }[];
     texts: {
       text1: string;
       text2: string;
@@ -66,24 +94,72 @@ export const projects = [
   {
     id: 1,
     category: ProjectCategory.Architecture,
-    title: "Pefka_7",
+    title: "Pefka 7",
     type: "New Build",
     year: "2022-",
     location: "Pefka/ Retziki, Greece",
     client: "Farlalis Building",
     status: ProjectStatus.InProgress,
     size: 520,
-    pictureURLs: { small1: small1, small2: small2 },
-    projectPageData: {
-      pictureURLs: {
-        land1: land1,
-        land2: land2,
-        land3: land3,
-        land4: land4,
-        port1: port1,
-        port2: port2,
-        port3: port3,
+    pictures: [
+      {
+        id: 1,
+        srcMobile: small1_mobile,
+        srcLaptop: small1_laptop,
+        srcDesktop: small1_desktop,
       },
+      {
+        id: 2,
+        srcMobile: small2_mobile,
+        srcLaptop: small2_laptop,
+        srcDesktop: small2_desktop,
+      },
+    ],
+    projectPageData: {
+      pictures: [
+        {
+          id: "land1",
+          srcMobile: land1_mobile,
+          srcLaptop: land1_laptop,
+          srcDesktop: land1_desktop,
+        },
+        {
+          id: "land2",
+          srcMobile: land2_mobile,
+          srcLaptop: land2_laptop,
+          srcDesktop: land2_desktop,
+        },
+        {
+          id: "land3",
+          srcMobile: land3_mobile,
+          srcLaptop: land3_laptop,
+          srcDesktop: land3_desktop,
+        },
+        {
+          id: "land4",
+          srcMobile: land4_mobile,
+          srcLaptop: land4_laptop,
+          srcDesktop: land4_desktop,
+        },
+        {
+          id: "port1",
+          srcMobile: port1_mobile,
+          srcLaptop: port1_laptop,
+          srcDesktop: port1_desktop,
+        },
+        {
+          id: "port2",
+          srcMobile: port2_mobile,
+          srcLaptop: port2_laptop,
+          srcDesktop: port2_desktop,
+        },
+        {
+          id: "port3",
+          srcMobile: port3_mobile,
+          srcLaptop: port3_laptop,
+          srcDesktop: port3_desktop,
+        },
+      ],
       texts: {
         text1: `Pefka 7 is located in the suburban village of Retziki, named after the Turkish Örencik, 
               which means 'Little Heaven', as a small settlement nestled in the heart of a pine wood forest, 
@@ -115,11 +191,7 @@ export const projects = [
         "MEP Engineer": ["Stelios Avramis"],
         "Permit Consultant": ["Irini Farkona"],
         "3D Visualisation": ["Loukas Koutsouris - Mirror Visuals"],
-        Materials: [
-          "Santanselmo, IT",
-          "Projetto Materials, GR",
-          "Epal, Windows & Doors, GR",
-        ],
+        Materials: ["Epal, Windows & Doors, GR"],
       },
     },
   },
