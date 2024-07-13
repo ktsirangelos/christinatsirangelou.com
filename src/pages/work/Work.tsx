@@ -83,6 +83,7 @@ const ProjectsAccordion = memo(
                   ? "inactive"
                   : ""
               }
+              initialEntered={id === 0}
             >
               <div className="accordion-item-container">
                 {pictures.map((picture) => (
@@ -113,10 +114,10 @@ const ProjectsAccordion = memo(
                   <div className="explore">
                     <Link to={`/work/${title}`} key={`${title}-explore`}>
                       Explore
-                      <span className="material-symbols-outlined">
-                        arrow_outward
-                      </span>
                     </Link>
+                    <span className="material-symbols-outlined">
+                      arrow_outward
+                    </span>
                   </div>
                 </div>
               </div>

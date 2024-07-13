@@ -136,15 +136,6 @@
           }
         }
 
-        .material-symbols-outlined {
-          font-size: $font-size-medium;
-          vertical-align: text-bottom;
-
-          @include mixins.respond(phone) {
-            font-size: $font-size-medium-mobile;
-          }
-        }
-
         img {
           height: 100%;
           width: 100%;
@@ -178,6 +169,15 @@
           .explore {
             a {
               display: inline-flex;
+            }
+
+            .material-symbols-outlined {
+              font-size: $font-size-medium;
+              vertical-align: text-bottom;
+
+              @include mixins.respond(phone) {
+                font-size: $font-size-small-mobile;
+              }
             }
           }
         }
