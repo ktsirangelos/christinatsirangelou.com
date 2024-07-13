@@ -156,6 +156,7 @@
           flex-direction: column;
           justify-content: space-between;
           font-size: $font-size-medium;
+          height: 100%;
 
           @include mixins.respond(phone) {
             gap: $base-vertical-unit * 2;
@@ -165,12 +166,18 @@
           .details {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            height: 30%;
+            justify-content: flex-start;
+            flex: 1;
             gap: $base-vertical-unit * 0.4;
 
             @include mixins.respond(phone) {
-              gap: $base-vertical-unit * 0.8;
+              gap: $base-vertical-unit * 0.6;
+            }
+          }
+
+          .explore {
+            a {
+              display: inline-flex;
             }
           }
         }
