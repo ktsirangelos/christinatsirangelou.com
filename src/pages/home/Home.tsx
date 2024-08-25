@@ -80,7 +80,7 @@ const HomeMain = () => {
           <img
             src={picture.srcMobile}
             alt={`Landing ${picture.id}`}
-            loading={index === 0 ? "eager" : "lazy"}
+            loading={index <= 1 ? "eager" : "lazy"}
           />
         </picture>
       ))}
