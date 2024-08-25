@@ -73,11 +73,19 @@ const HomeHeader = () => {
 const HomeMain = () => {
   return (
     <main className="home-main">
-      {landingPictures.map((picture) => (
+      {landingPictures.map((picture, index) => (
         <picture key={picture.id}>
           <source media="(min-width: 112.5em)" srcSet={picture.srcDesktop} />
           <source media="(min-width: 75em)" srcSet={picture.srcLaptop} />
-          <img src={picture.srcMobile} alt={`Landing ${picture.id}`} />
+          <img
+            src={picture.srcMobile}
+            alt={`Landing ${picture.id}`}
+            loading={index === 0 ? "eager" : "lazy"}
+            style={{
+              backgroundColor: "#f0f0f0",
+              aspectRatio: "16 / 9",
+            }}
+          />
         </picture>
       ))}
     </main>
