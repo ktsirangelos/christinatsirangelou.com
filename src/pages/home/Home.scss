@@ -36,6 +36,8 @@
   img {
     width: 100%;
     margin-bottom: $base-vertical-unit * 2;
+    background-color: #f0f0f0;
+    aspect-ratio: 16 / 9;
 
     @include mixins.respond(phone) {
       margin-bottom: $base-vertical-unit * 0.6;

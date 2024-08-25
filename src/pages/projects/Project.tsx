@@ -15,11 +15,15 @@ const ProjectHeader = ({ project }: { project: ProjectType }) => (
 const ProjectContent = ({ project }: { project: ProjectType }) => {
   const { pictures, texts, credits } = project.projectPageData;
 
-  const imageElements = pictures.map((picture) => (
+  const imageElements = pictures.map((picture, index) => (
     <picture key={picture.id} className={picture.id}>
       <source media="(min-width: 112.5em)" srcSet={picture.srcDesktop} />
       <source media="(min-width: 75em)" srcSet={picture.srcLaptop} />
-      <img src={picture.srcMobile} alt={`Landing ${picture.id}`} />
+      <img
+        src={picture.srcMobile}
+        alt={`Project ${picture.id}`}
+        loading={index <= 1 ? "eager" : "lazy"}
+      />
     </picture>
   ));
 

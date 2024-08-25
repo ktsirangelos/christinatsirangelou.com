@@ -81,10 +81,6 @@ const HomeMain = () => {
             src={picture.srcMobile}
             alt={`Landing ${picture.id}`}
             loading={index === 0 ? "eager" : "lazy"}
-            style={{
-              backgroundColor: "#f0f0f0",
-              aspectRatio: "16 / 9",
-            }}
           />
         </picture>
       ))}
