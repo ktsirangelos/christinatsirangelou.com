@@ -180,7 +180,10 @@ export const projects = [
               clay-tiled rooftop appearance characteristic of the village.`,
       },
       credits: {
-        Architect: ["Christina Tsirangelou architects"],
+        Architect: [
+          "Christina Tsirangelou architects",
+          "Feasibility Study as USP Partner",
+        ],
         "Project Team": [
           "Simos Antoniadis",
           "Christina Mitilinaiou",
