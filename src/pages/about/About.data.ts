@@ -12,4 +12,6 @@ export const clients = [
   { id: 11, name: "Pnevmatikos", url: "https://pnevmatikosmarble.gr/en/" },
   { id: 12, name: "Steps", url: "https://steps.org.gr/" },
   { id: 13, name: "Keng", url: "https://www.keng.gr/" },
+  { id: 14, name: "Mainfest", url: "https://www.manifest.gr/" },
+  { id: 15, name: "ΔΟΜΗ ΑΤΕ", url: "https://domi-ate.gr/" },
 ];

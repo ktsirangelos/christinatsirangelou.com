@@ -1,32 +1,46 @@
 @use "../../scss/utils/mixins";
 @import "../../scss/utils/variables";
 
-.about-text {
+.team {
+  display: flex;
+  flex-direction: column;
+  gap: $base-vertical-unit;
+  padding: 0 $base-horizontal-unit;
+
+  h2 {
+    font-size: $font-size-large;
+  }
+}
+
+.bios {
+  display: flex;
+  flex-direction: column;
+  gap: $base-vertical-unit;
+}
+
+.christina,
+.niovi {
   display: grid;
-  grid-template-areas:
-    "first third"
-    "second fourth";
+  grid-template-columns: 2fr 3fr;
   gap: $base-vertical-unit;
   font-size: $font-size-medium;
   line-height: $line-height-medium;
-  padding: 0 $base-horizontal-unit;
-
-  .frist-paragraph {
-    grid-area: first;
-  }
-  .second-paragraph {
-    grid-area: second;
-  }
-  .third-paragraph {
-    grid-area: third;
-  }
-  .fourth-paragraph {
-    grid-area: fourth;
-  }
 
   @include mixins.respond(phone) {
+    grid-template-columns: 1fr;
+  }
+
+  .picture {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .info {
     display: flex;
     flex-direction: column;
+    gap: $base-vertical-unit;
   }
 }
 
@@ -45,17 +59,20 @@
     grid-template-columns: repeat(5, 1fr);
     font-size: $font-size-small;
     line-height: $line-height-small;
+    gap: calc($base-vertical-unit / 6);
 
     @include mixins.respond(phone) {
       grid-template-columns: repeat(2, 1fr);
       font-size: $font-size-small-mobile;
       line-height: $line-height-small-mobile;
+      gap: calc($base-vertical-unit / 4);
     }
   }
 
   .material-symbols-outlined {
     vertical-align: text-bottom;
     font-size: $font-size-small;
+
     @include mixins.respond(phone) {
       font-size: $font-size-small-mobile;
     }
