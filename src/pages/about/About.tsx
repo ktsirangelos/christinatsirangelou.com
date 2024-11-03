@@ -94,17 +94,45 @@ const AboutTeam = () => {
             </div>
             <div className="text">
               <p>
-                Niovi Tsimpikou studied architecture at the Democritus
+                Niovi Tsompikou studied architecture at the Democritus
                 University of Thrace, where she earned her MA in Architecture.
-                She worked for Sparch Architects for the last decade,
-                contributing to various new build, office projects, and both
-                private and public competitions.
+                She worked for SParch Architects and later on for the
+                independent office RS SParch for the last 12 years, contributing
+                to various new build, office projects, and both private and
+                public competitions. In 2024, Niovi became an integral part of
+                CTa. As a Senior Architect, she oversees the entire design
+                process for numerous upcoming projects and supervises
+                project-based teams to ensure successful delivery. She also
+                works as a freelance architect.
                 <br />
                 <br />
-                In 2023, Niovi became an integral part of CTa. As a Senior
-                Architect, she oversees the entire design process for numerous
-                upcoming projects and supervises project-based teams to ensure
-                successful delivery. She also works as a freelance architect.
+                Notable project mentions
+                <br />
+                <br />
+                2023 εξέλιξις, Athens National Archaeological Museum,
+                Competition,
+                <br />
+                Athens, Greece. Lead Architect: OMA, Greek Partner: RS SParch
+                <br />
+                <br />
+                2022 eLement_Fragkokklisias Office Building, Prodea Investments,
+                <br />
+                Athens, Greece. Architect: RS SParch_Rena Sakellaridou
+                <br />
+                <br />
+                2020 Marina Galleria_ Six Plazas, Competition, Hellinikon,
+                <br />
+                Athens, Greece. Architect: RS SParch_Rena Sakellaridou
+                <br />
+                <br />
+                2018 Agemar Headquarters, Angelicoussis Group of Companies HQ,
+                <br />
+                Athens, Greece. Architect: RS SParch_Rena Sakellaridou
+                <br />
+                <br />
+                2018 Forest Houses, Museum of Forest Finn Culture, Competition,
+                <br />
+                Svullrya, Norway. Architects: RS SParch x Meinich Arkitekter AS
               </p>
             </div>
           </div>
