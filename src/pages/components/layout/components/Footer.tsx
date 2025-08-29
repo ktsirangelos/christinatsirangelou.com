@@ -5,10 +5,10 @@ export const Footer = () => {
     <footer className="page-footer">
       <ul>
         <li className="copyright">
-          <p>&copy; 2024 Christina Tsirangelou αrchitects</p>
+          <p>&copy; 2025 Christina Tsirangelou αrchitects</p>
         </li>
         <li className="copyright-mobile">
-          <p>&copy; 2024 CTα</p>
+          <p>&copy; 2025 CTα</p>
         </li>
         <li className="insta">
           <a href="https://www.instagram.com/cta.athens/" target="_blank">
