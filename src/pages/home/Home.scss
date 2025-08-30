@@ -30,7 +30,7 @@
   margin-top: $base-vertical-unit * 13.75;
 
   @include mixins.respond(phone) {
-    margin-top: $base-vertical-unit * 15;
+    margin-top: $base-vertical-unit * 16;
   }
 
   img {
