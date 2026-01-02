@@ -107,7 +107,7 @@ export const contactDetails = {
     mobile: "Christina\nTsirangelou\nαrchitects",
   },
   address: {
-    desktop: "Dionysiou Areopagitou 37, Athens",
+    desktop: "Konstantinou Versi 8, Athens",
     mobile: "Address",
     url: "https://maps.app.goo.gl/Ci85ecDu69r8gXfz8",
   },
